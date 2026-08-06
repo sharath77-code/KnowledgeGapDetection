@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% block title %}Performance Dashboard - Knowledge Gap AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    
+    <!-- Top Header Banner -->
+    <div class="glass-panel p-4 mb-4">
+        <div class="row align-items-center g-3">
+            <div class="col-lg-8">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="feature-icon-box mb-0" style="width:56px; height:56px; font-size:1.5rem;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <h3 class="font-heading fw-bold mb-0">{{ result_data.student_name }}</h3>
+                            <span class="badge badge-brand">{{ result_data.department }}</span>
+                        </div>
+                        <p class="text-muted small mb-0">Reg No: <strong>{{ result_data.register_number }}</strong> &bull; Assessment Completed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+                <span class="badge {{ result_data.gap_badge_class }} fs-6 p-2 px-3">
+                    <i class="fas fa-brain me-1"></i> {{ result_data.gap_level }}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Grid (4 Key Stat Cards + Sub-Stats) -->
+    <div class="row g-4 mb-3">
+        <div class="col-6 col-lg-3">
+            <div class="glass-card stat-card p-4">
+                <div class="d-flex align-items-center justify-content-between w-100 mb-2">
+                    <span class="stat-label">Total Score</span>
+                    <div class="stat-icon stat-icon-purple">
+                        <i class="fas fa-award"></i>
+                    </div>
+                </div>
+                <div class="stat-value fs-2">{{ result_data.score }} / {{ result_data.total_questions }}</div>
+                <div class="small text-muted mt-1">
+                    <span class="text-success font-weight-bold"><i class="fas fa-check me-1"></i>{{ result_data.correct_answers }} Correct</span> &bull; 
+                    <span class="text-danger font-weight-bold"><i class="fas fa-times me-1"></i>{{ result_data.wrong_answers }} Wrong</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <div class="glass-card stat-card p-4">
+                <div class="d-flex align-items-center justify-content-between w-100 mb-2">
+                    <span class="stat-label">Accuracy Rate</span>
+                    <div class="stat-icon stat-icon-green">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                </div>
+                <div class="stat-value fs-2 text-success">{{ result_data.accuracy }}%</div>
+                <div class="small text-muted mt-1">Assessment Performance</div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <div class="glass-card stat-card p-4">
+                <div class="d-flex align-items-center justify-content-between w-100 mb-2">
+                    <span class="stat-label">Knowledge Gap</span>
+                    <div class="stat-icon stat-icon-amber">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                </div>
+                <div class="stat-value fs-2 text-warning">{{ result_data.knowledge_gap_score }}%</div>
+                <div class="small text-muted mt-1">Remediation Gap Index</div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <div class="glass-card stat-card p-4">
+                <div class="d-flex align-items-center justify-content-between w-100 mb-2">
+                    <span class="stat-label">Weak Skills</span>
+                    <div class="stat-icon stat-icon-red">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                </div>
+                <div class="stat-value fs-2 text-danger">{{ result_data.weak_skills | length }}</div>
+                <div class="small text-muted mt-1">Focus Areas Identified</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row (Donut Chart, Skill Bar Chart, Circular Gauge) -->
+    <div class="row g-4 mb-4">
+        
+        <!-- 1. Pie / Donut Chart (Correct vs Wrong) -->
+        <div class="col-lg-4">
+            <div class="glass-card p-4 h-100">
+                <h5 class="font-heading fw-bold mb-3">
+                    <i class="fas fa-chart-pie text-primary me-2"></i> Answer Accuracy Distribution
+                </h5>
+                <div style="height: 250px; position: relative;">
+                    <canvas id="correctVsWrongChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Bar Chart (Skill-wise Performance) -->
+        <div class="col-lg-5">
+            <div class="glass-card p-4 h-100">
+                <h5 class="font-heading fw-bold mb-3">
+                    <i class="fas fa-chart-column text-info me-2"></i> Skill-wise Performance (%)
+                </h5>
+                <div style="height: 250px; position: relative;">
+                    <canvas id="skillPerformanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Circular Knowledge Gap Gauge Indicator -->
+        <div class="col-lg-3">
+            <div class="glass-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+                <div>
+                    <h5 class="font-heading fw-bold mb-2">
+                        <i class="fas fa-gauge-high text-warning me-1"></i> Gap Severity
+                    </h5>
+                    <p class="text-muted extra-small">AI Machine Learning Gap Index</p>
+                </div>
+
+                <div class="gauge-wrapper" id="knowledgeGapGauge">
+                    <svg class="gauge-svg" viewBox="0 0 160 160">
+                        <circle class="gauge-bg" cx="80" cy="80" r="70"></circle>
+                        <circle id="knowledgeGapGaugeCircle" class="gauge-progress" cx="80" cy="80" r="70"></circle>
+                    </svg>
+                    <div class="gauge-center-text">
+                        <div id="knowledgeGapScoreText" class="gauge-percentage" data-gap-score="{{ result_data.knowledge_gap_score }}">
+                            {{ result_data.knowledge_gap_score }}%
+                        </div>
+                        <div class="text-muted extra-small">GAP INDEX</div>
+                    </div>
+                </div>
+
+                <span class="badge badge-brand mt-2">
+                    {{ result_data.gap_level }}
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Strengths vs Weak Skills Section (Clean 2-Column Grid Layout) -->
+    <div class="row g-4 mb-4">
+        
+        <!-- Weak Skills List Card -->
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100">
+                <h5 class="font-heading fw-bold mb-3 text-danger">
+                    <i class="fas fa-triangle-exclamation me-2"></i> Weak Skills (Action Required)
+                </h5>
+                <p class="text-muted small mb-3">Skill domains with lower accuracy requiring targeted remediation.</p>
+
+                <div class="d-flex flex-column gap-2">
+                    {% for skill in result_data.weak_skills %}
+                    <div class="skill-item border-start border-danger border-4">
+                        <div>
+                            <div class="skill-name">{{ skill.name }}</div>
+                            <span class="text-muted extra-small">Accuracy: {{ skill.score }}%</span>
+                        </div>
+                        <span class="badge badge-danger-custom">Needs Review</span>
+                    </div>
+                    {% else %}
+                    <p class="text-muted italic mb-0">No severe weak skills detected! Great performance.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Strong Competencies List Card -->
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100">
+                <h5 class="font-heading fw-bold mb-3 text-success">
+                    <i class="fas fa-circle-check me-2"></i> Strong Competencies
+                </h5>
+                <p class="text-muted small mb-3">Skill areas where you demonstrated high proficiency and correct problem-solving techniques.</p>
+
+                <div class="d-flex flex-column gap-2">
+                    {% for skill in result_data.strengths %}
+                    <div class="skill-item border-start border-success border-4">
+                        <div>
+                            <div class="skill-name">{{ skill.name }}</div>
+                            <span class="text-muted extra-small">Accuracy: {{ skill.score }}%</span>
+                        </div>
+                        <span class="badge badge-success-custom">Proficient</span>
+                    </div>
+                    {% else %}
+                    <p class="text-muted italic mb-0">Keep practicing to build strong competencies.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA Button to Recommendations -->
+    <div class="text-center py-3">
+        <a href="{{ url_for('recommendations') }}" class="btn btn-brand btn-lg py-3 px-5 fs-5">
+            <i class="fas fa-lightbulb me-2"></i> View AI Recommendations & Learning Path
+        </a>
+    </div>
+
+</div>
+
+<script>
+    window.DASHBOARD_DATA = {
+        correct: {{ result_data.correct_answers | default(0) }},
+        wrong: {{ result_data.wrong_answers | default(0) }},
+        unanswered: {{ result_data.unanswered_answers | default(0) }},
+        skills: {{ result_data.skill_names_json | safe if result_data.skill_names_json else '[]' }},
+        skillScores: {{ result_data.skill_scores_json | safe if result_data.skill_scores_json else '[]' }}
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.renderDashboardCharts) {
+            window.renderDashboardCharts();
+        }
+    });
+</script>
+{% endblock %}

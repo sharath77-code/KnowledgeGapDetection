@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Student Authentication - Knowledge Gap AI{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="glass-card p-4 p-md-5">
+                
+                <!-- Login Form Header -->
+                <div class="text-center mb-4">
+                    <div class="feature-icon-box mx-auto mb-3" style="width:60px; height:60px; font-size:2rem;">
+                        <i class="fas fa-user-shield text-primary"></i>
+                    </div>
+                    <h2 class="font-heading fw-bold">Student Authentication</h2>
+                    <p class="text-secondary small">Login to start assessment or view personalized learning analytics.</p>
+                </div>
+
+                {% if error %}
+                <div class="alert alert-danger glass-panel text-danger border-danger mb-4">
+                    <i class="fas fa-triangle-exclamation me-2"></i> {{ error }}
+                </div>
+                {% endif %}
+
+                <!-- Student Login Form -->
+                <form action="{{ url_for('login') }}" method="POST" class="d-flex flex-column gap-3">
+                    
+                    <!-- Full Name Field -->
+                    <div>
+                        <label for="student_name" class="form-label font-heading fw-bold text-white small">
+                            <i class="fas fa-user me-1 text-primary"></i> Student Full Name *
+                        </label>
+                        <input type="text" class="form-control" id="student_name" name="student_name" 
+                               placeholder="e.g. Alex Morgan" required
+                               value="{{ session.get('student_name', '') }}">
+                    </div>
+
+                    <!-- Register Number Field -->
+                    <div>
+                        <label for="register_number" class="form-label font-heading fw-bold text-white small">
+                            <i class="fas fa-id-card me-1 text-primary"></i> Registration Number *
+                        </label>
+                        <input type="text" class="form-control" id="register_number" name="register_number" 
+                               placeholder="e.g. 210101001" required
+                               value="{{ session.get('register_number', '') }}">
+                    </div>
+
+                    <!-- Department Field -->
+                    <div>
+                        <label for="department" class="form-label font-heading fw-bold text-white small">
+                            <i class="fas fa-building-columns me-1 text-primary"></i> Department / Class *
+                        </label>
+                        <select class="form-select" id="department" name="department" required>
+                            <option value="Computer Science & Engineering" selected>Computer Science & Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Artificial Intelligence & Data Science">Artificial Intelligence & Data Science</option>
+                            <option value="Electronics & Communication">Electronics & Communication</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                        </select>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="form-label font-heading fw-bold text-white small">
+                            <i class="fas fa-envelope me-1 text-primary"></i> Institution Email (Optional)
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               placeholder="student@institution.edu"
+                               value="{{ session.get('email', '') }}">
+                    </div>
+
+                    <!-- Demo Fast Login Helper -->
+                    <div class="p-3 rounded-3 my-2" style="background: rgba(99, 102, 241, 0.12); border: 1px dashed var(--border-glow);">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="small text-secondary"><i class="fas fa-bolt text-warning me-1"></i> Demo Login Preset:</span>
+                            <button type="button" class="btn btn-brand-outline btn-sm py-1" onclick="fillDemoStudent()">
+                                Load Demo Student
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-brand btn-lg w-100 font-heading fw-bold mt-2">
+                        <i class="fas fa-arrow-right-to-bracket me-2"></i> Authenticate & Start Session
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function fillDemoStudent() {
+    document.getElementById('student_name').value = "Sharath Candidate";
+    document.getElementById('register_number').value = "210101099";
+    document.getElementById('email').value = "sharath@institution.edu";
+}
+</script>
+{% endblock %}

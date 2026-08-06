@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Assessment Instructions - Knowledge Gap AI{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="max-w-900 mx-auto">
+        
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <span class="badge badge-brand mb-2">
+                <i class="fas fa-clipboard-list me-1"></i> Pre-Assessment Briefing
+            </span>
+            <h2 class="font-heading fw-bold">Test Instructions & Guidelines</h2>
+            <p class="text-secondary">Please review the rules carefully before launching your evaluation.</p>
+        </div>
+
+        <!-- Student Profile Quick Card -->
+        <div class="glass-card p-3 mb-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="feature-icon-box mb-0" style="width:42px; height:42px; font-size:1.1rem;">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div>
+                    <h6 class="mb-0 fw-bold">{{ student_name if student_name else "Student Candidate" }}</h6>
+                    <span class="text-muted small">Reg No: {{ register_number if register_number else "210101001" }} &bull; {{ department if department else "Computer Science" }}</span>
+                </div>
+            </div>
+            <span class="badge badge-success-custom fs-6">
+                <i class="fas fa-circle-check me-1"></i> Ready for Test
+            </span>
+        </div>
+
+        <!-- Quick Metrics Highlights Grid -->
+        <div class="row g-3 mb-4 text-center">
+            <div class="col-6 col-md-3">
+                <div class="glass-card p-3">
+                    <i class="fas fa-list-ol text-primary fs-3 mb-1"></i>
+                    <div class="fw-bold fs-4">10</div>
+                    <div class="text-muted extra-small">TOTAL QUESTIONS</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="glass-card p-3">
+                    <i class="fas fa-stopwatch text-warning fs-3 mb-1"></i>
+                    <div class="fw-bold fs-4">15 Mins</div>
+                    <div class="text-muted extra-small">TIME LIMIT</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="glass-card p-3">
+                    <i class="fas fa-desktop text-info fs-3 mb-1"></i>
+                    <div class="fw-bold fs-4">1 by 1</div>
+                    <div class="text-muted extra-small">DISPLAY MODE</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="glass-card p-3">
+                    <i class="fas fa-shield-check text-success fs-3 mb-1"></i>
+                    <div class="fw-bold fs-4">0 Penalty</div>
+                    <div class="text-muted extra-small">NO NEGATIVE MARKS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Rules Panel -->
+        <div class="glass-panel p-4 p-md-5 mb-4">
+            <h4 class="font-heading fw-bold mb-3"><i class="fas fa-gavel text-primary me-2"></i> Assessment Rules & AI Process</h4>
+            
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                <li class="d-flex align-items-start gap-3">
+                    <div class="badge badge-brand rounded-circle p-2 mt-1"><i class="fas fa-1"></i></div>
+                    <div>
+                        <strong class="d-block">Skill-Mapped Questions</strong>
+                        <span class="text-muted small">Each question measures a specific math skill from the ASSISTments dataset.</span>
+                    </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                    <div class="badge badge-brand rounded-circle p-2 mt-1"><i class="fas fa-2"></i></div>
+                    <div>
+                        <strong class="d-block">Single Question Rendering</strong>
+                        <span class="text-muted small">Questions appear one at a time. Navigate using Previous, Next, or Question Numbers.</span>
+                    </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                    <div class="badge badge-brand rounded-circle p-2 mt-1"><i class="fas fa-3"></i></div>
+                    <div>
+                        <strong class="d-block">Active Countdown Timer</strong>
+                        <span class="text-muted small">A live timer will display in the top right. When time expires, answers auto-submit.</span>
+                    </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                    <div class="badge badge-brand rounded-circle p-2 mt-1"><i class="fas fa-4"></i></div>
+                    <div>
+                        <strong class="d-block">Hybrid ML Diagnostic Pipeline</strong>
+                        <span class="text-muted small">Upon submission, your responses will be processed by XGBoost to compute Knowledge Gap Severity.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="p-3 rounded-3" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3);">
+                <div class="d-flex align-items-center gap-2 text-warning fw-bold mb-1">
+                    <i class="fas fa-triangle-exclamation"></i> Important Notice
+                </div>
+                <p class="text-muted small mb-0">Do not refresh or close the browser window during the test.</p>
+            </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="text-center">
+            <a href="{{ url_for('quiz') }}" class="btn btn-brand btn-lg py-3 px-5 fs-5">
+                <i class="fas fa-play me-2"></i> Start Test Now
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

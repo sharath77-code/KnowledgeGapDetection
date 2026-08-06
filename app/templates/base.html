@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Knowledge Gap Detection & Personalized Learning Recommendation using Hybrid Machine Learning">
+    <title>{% block title %}Knowledge Gap AI - Intelligent Tutoring System{% endblock %}</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Chart.js 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- Custom CSS System -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}?v=3.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}?v=3.0">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <!-- Sticky Glassmorphic Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid px-md-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url_for('home') }}">
+                <div class="feature-icon-box mb-0" style="width:38px; height:38px; font-size:1.5rem; border-radius:10px;">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <span class="navbar-brand-text">EduGap <span class="badge badge-brand ms-1 fs-6">AI</span></span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <i class="fas fa-bars text-primary fs-4"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="{{ url_for('home') }}"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="{{ url_for('instructions') }}"><i class="fas fa-user-graduate me-1"></i> Assessment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="{{ url_for('result') }}"><i class="fas fa-chart-line me-1"></i> Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="{{ url_for('recommendations') }}"><i class="fas fa-lightbulb me-1"></i> Recommendations</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button id="themeToggleBtn" class="btn-theme-toggle" title="Toggle Light/Dark Theme">
+                        <i class="fas fa-sun text-warning"></i>
+                    </button>
+
+                    {% if session.student_name %}
+                    <div class="dropdown">
+                        <button class="btn btn-brand-outline btn-sm dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-circle-user text-primary fs-5"></i>
+                            <span class="fw-bold">{{ session.student_name }}</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end glass-card border-glass p-2">
+                            <li class="dropdown-header text-muted small">Reg: {{ session.register_number }}</li>
+                            <li><hr class="dropdown-divider border-glass"></li>
+                            <li>
+                                <a class="dropdown-item text-danger fw-bold rounded-2" href="{{ url_for('logout') }}">
+                                    <i class="fas fa-right-from-bracket me-2"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    {% else %}
+                    <a href="{{ url_for('login') }}" class="btn btn-brand btn-sm">
+                        <i class="fas fa-right-to-bracket me-1"></i> Student Login
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dynamic Content Block -->
+    <main class="flex-grow-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;"></div>
+
+    <!-- Glassmorphic Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h5 class="navbar-brand-text mb-2">Knowledge Gap Detection System</h5>
+                    <p class="text-muted small mb-0">
+                        Final Year Engineering Project &bull; Powered by Hybrid Machine Learning, XGBoost & ASSISTments Dataset.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="d-flex gap-2 justify-content-lg-end flex-wrap mb-2">
+                        <span class="badge badge-brand">Flask</span>
+                        <span class="badge badge-brand">Hybrid ML</span>
+                        <span class="badge badge-brand">XGBoost</span>
+                        <span class="badge badge-brand">Chart.js</span>
+                        <span class="badge badge-brand">ASSISTments 2009</span>
+                    </div>
+                    <p class="text-muted small mb-0">&copy; 2026 Intelligent Tutoring System. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}?v=3.0"></script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}?v=3.0"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}?v=3.0"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

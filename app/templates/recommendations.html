@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+
+{% block title %}Personalized Recommendations - Knowledge Gap AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    
+    <!-- Top Header Banner -->
+    <div class="glass-panel p-4 mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div>
+                <span class="badge badge-brand mb-2">
+                    <i class="fas fa-robot me-1"></i> Personalized Remediation Plan
+                </span>
+                <h2 class="font-heading fw-bold mb-1">Personalized Learning Roadmap</h2>
+                <p class="text-muted small mb-0">Complete learning roadmap ordered by your quiz scores (Lowest scoring skills prioritized first).</p>
+            </div>
+            
+            <div class="d-flex gap-2">
+                <button onclick="window.print()" class="btn btn-brand-outline">
+                    <i class="fas fa-print me-1"></i> Print Full Roadmap
+                </button>
+                <a href="{{ url_for('result') }}" class="btn btn-brand">
+                    <i class="fas fa-chart-line me-1"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="d-flex align-items-center justify-content-center gap-2 mb-4 flex-wrap">
+        <button class="btn btn-brand rec-filter-btn active" data-filter="all">All Skills (10)</button>
+        <button class="btn btn-brand-outline rec-filter-btn" data-filter="critical">Critical Focus Areas</button>
+        <button class="btn btn-brand-outline rec-filter-btn" data-filter="mastered">Mastered Skills</button>
+    </div>
+
+    <!-- Recommendation Cards Grid -->
+    <div class="row g-4 mb-5" id="recommendationsGrid">
+        {% for rec in recommendations %}
+        <div class="col-md-6 col-lg-4 rec-card-item" data-category="{{ rec.category }}">
+            <div class="glass-card rec-card">
+                
+                <div>
+                    <!-- Step Badge & Score Status -->
+                    <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                        {% if loop.index == 1 %}
+                            <span class="rec-rank-pill rec-priority-1">
+                                <i class="fas fa-triangle-exclamation me-1"></i> Priority #1
+                            </span>
+                        {% elif loop.index == 2 %}
+                            <span class="rec-rank-pill rec-priority-2">
+                                <i class="fas fa-circle-exclamation me-1"></i> Priority #2
+                            </span>
+                        {% elif loop.index == 3 %}
+                            <span class="rec-rank-pill rec-priority-3">
+                                <i class="fas fa-list-check me-1"></i> Priority #3
+                            </span>
+                        {% else %}
+                            <span class="rec-rank-pill">
+                                <i class="fas fa-hashtag me-1"></i> Priority #{{ loop.index }}
+                            </span>
+                        {% endif %}
+                        <span class="badge {{ rec.badge_class }}">
+                            {{ rec.badge_text }}
+                        </span>
+                    </div>
+
+                    <!-- Skill Title -->
+                    <h4 class="font-heading fw-bold mb-2">{{ rec.skill_name }}</h4>
+                    <p class="text-secondary small mb-3">{{ rec.description }}</p>
+
+                    <!-- Meta Tags -->
+                    <div class="d-flex gap-2 flex-wrap mb-4">
+                        <span class="resource-chip">
+                            <i class="fas fa-clock text-primary me-1"></i> {{ rec.estimated_time }}
+                        </span>
+                        <span class="resource-chip">
+                            <i class="fas fa-bullseye text-info me-1"></i> {{ rec.status_text }}
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Resource Action Buttons -->
+                <div class="pt-3 border-top border-glass d-flex flex-column gap-2">
+                    <!-- Video Hub Modal Trigger -->
+                    <button class="btn btn-brand-outline btn-sm w-100 d-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#videoModal_{{ loop.index }}">
+                        <i class="fas fa-circle-play text-danger"></i> Watch Video Lessons
+                    </button>
+
+                    <!-- Extremely Detailed Master Study Notes Trigger -->
+                    <button class="btn btn-brand-outline btn-sm w-100 d-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#notesModal_{{ loop.index }}">
+                        <i class="fas fa-file-lines text-warning"></i> Open Master Study Notebook
+                    </button>
+
+                    <!-- Topic Practice Link -->
+                    <a href="{{ url_for('quiz', skill=rec.skill_name) }}" class="btn btn-brand btn-sm w-100 d-flex align-items-center justify-content-center gap-2">
+                        <i class="fas fa-pen-to-square"></i> Practice {{ rec.skill_name }} Sets
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 100% Guaranteed Working Video Hub Modal -->
+        <div class="modal fade" id="videoModal_{{ loop.index }}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content glass-card">
+                    <div class="modal-header border-glass">
+                        <h5 class="modal-header-title font-heading fw-bold">
+                            <i class="fas fa-circle-play text-danger me-2"></i> {{ rec.skill_name }} - Video Lesson Hub
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center p-4">
+                        
+                        <!-- Premium Video Hub Banner -->
+                        <div class="p-4 rounded-3 text-center mb-3" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(15, 23, 42, 0.95)); border: 1px solid rgba(99, 102, 241, 0.3);">
+                            <div class="feature-icon-box mx-auto mb-3" style="width: 70px; height: 70px; font-size: 2rem; background: rgba(99, 102, 241, 0.2); color: #6366f1; border-radius: 50%;">
+                                <i class="fas fa-circle-play"></i>
+                            </div>
+                            <h4 class="font-heading fw-bold text-white mb-2">{{ rec.skill_name }} Video Tutorials</h4>
+                            <p class="text-secondary mb-4">Stream verified video lectures covering formulas, step-by-step solved problems, and exam shortcuts for {{ rec.skill_name }}.</p>
+                            
+                            <div class="d-flex flex-column gap-3 max-width-500 mx-auto">
+                                <a href="{{ rec.khan_video_url }}" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn btn-brand btn-lg w-100 py-3 font-heading fw-bold shadow-lg">
+                                    <i class="fas fa-graduation-cap me-2 fs-4"></i> Watch Khan Academy Video Lesson
+                                </a>
+
+                                <a href="{{ rec.edu_video_url }}" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn btn-success btn-lg w-100 py-3 font-heading fw-bold shadow-lg">
+                                    <i class="fas fa-circle-play me-2 fs-4"></i> Stream Educational Video Portal
+                                </a>
+
+                                <a href="{{ rec.web_video_url }}" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn btn-secondary btn-sm w-100 py-2 mt-1 font-heading fw-bold">
+                                    <i class="fas fa-magnifying-glass me-2"></i> 🔍 Search All Video Tutorials Across Web
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXTREMELY DETAILED FULL ACADEMIC MASTER STUDY NOTEBOOK MODAL -->
+        <div class="modal fade" id="notesModal_{{ loop.index }}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content glass-card p-2">
+                    <div class="modal-header border-glass p-4">
+                        <div>
+                            <span class="badge badge-brand mb-1"><i class="fas fa-book me-1"></i> Academic Master Notebook</span>
+                            <h3 class="modal-header-title font-heading fw-bold mb-0">
+                                {{ rec.detailed_notes.title }}
+                            </h3>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body p-4 p-md-5">
+                        
+                        <!-- Module 1: Executive Concept Overview -->
+                        <div class="mb-4">
+                            <h4 class="fw-bold text-primary mb-2"><i class="fas fa-book-open me-2"></i> 1. Executive Concept Overview</h4>
+                            <p class="text-secondary fs-5" style="line-height: 1.8;">{{ rec.detailed_notes.overview }}</p>
+                            <div class="p-3 rounded-3 mt-2" style="background: rgba(255, 255, 255, 0.04); border-left: 4px solid var(--primary-color);">
+                                <p class="text-secondary mb-0 fs-6"><strong>Theoretical Foundation:</strong> {{ rec.detailed_notes.theory }}</p>
+                            </div>
+                        </div>
+
+                        <hr class="border-glass my-4">
+                        
+                        <!-- Module 2: Key Formulas & Theorems -->
+                        <div class="mb-4">
+                            <h4 class="fw-bold text-warning mb-3"><i class="fas fa-square-root-variable me-2"></i> 2. Governing Formulas, Axioms & Theorems</h4>
+                            <div class="row g-3">
+                                {% for formula in rec.detailed_notes.formulas %}
+                                <div class="col-12">
+                                    <div class="p-3 rounded-3" style="background: rgba(24, 35, 59, 0.9); border: 1px solid var(--border-glow);">
+                                        <code class="fs-5 text-warning fw-bold">{{ formula }}</code>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <hr class="border-glass my-4">
+
+                        <!-- Module 3: Exhaustive Solved Problem Examples -->
+                        <div class="mb-4">
+                            <h4 class="fw-bold text-success mb-3"><i class="fas fa-calculator me-2"></i> 3. Step-by-Step Solved Academic Examples</h4>
+                            <div class="row g-4">
+                                {% for ex in rec.detailed_notes.examples %}
+                                <div class="col-12">
+                                    <div class="p-4 rounded-3" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge badge-success-custom">{{ ex.level }}</span>
+                                        </div>
+                                        <h5 class="fw-bold text-primary fs-5 mb-2">Problem: {{ ex.problem }}</h5>
+                                        {% if ex.step1 %}<p class="text-secondary fs-6 mb-1">&bull; {{ ex.step1 }}</p>{% endif %}
+                                        {% if ex.step2 %}<p class="text-secondary fs-6 mb-1">&bull; {{ ex.step2 }}</p>{% endif %}
+                                        {% if ex.step3 %}<p class="text-secondary fs-6 mb-1">&bull; {{ ex.step3 }}</p>{% endif %}
+                                        {% if ex.step4 %}<p class="text-secondary fs-6 mb-1">&bull; {{ ex.step4 }}</p>{% endif %}
+                                        <div class="mt-3">
+                                            <span class="badge badge-success-custom fs-6 p-2"><i class="fas fa-circle-check me-1"></i> Solution: {{ ex.solution }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <hr class="border-glass my-4">
+
+                        <!-- Module 4: Pitfalls & Exam Shortcuts -->
+                        <div class="mb-4">
+                            <h4 class="fw-bold text-danger mb-3"><i class="fas fa-triangle-exclamation me-2"></i> 4. Common Exam Pitfalls & Misconceptions</h4>
+                            <ul class="text-secondary fs-6 ps-3">
+                                {% for pit in rec.detailed_notes.pitfalls %}
+                                <li class="mb-2">{{ pit }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <!-- Module 5: Pro Tip -->
+                        <div class="alert alert-warning border-0 glass-panel p-4 mb-4">
+                            <h5 class="fw-bold text-warning mb-1"><i class="fas fa-lightbulb me-2"></i> 5. Pro Exam Revision Strategy</h5>
+                            <p class="text-secondary mb-0 fs-6">{{ rec.detailed_notes.tips }}</p>
+                        </div>
+
+                        <!-- Action Footer -->
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top border-glass">
+                            <a href="{{ url_for('pdf_notes', skill=rec.skill_name) }}" target="_blank" class="btn btn-brand-outline btn-lg">
+                                <i class="fas fa-file-pdf me-2 text-danger fs-5"></i> Download / Save Official PDF Document
+                            </a>
+                            <a href="{{ url_for('quiz', skill=rec.skill_name) }}" class="btn btn-brand btn-lg">
+                                <i class="fas fa-pen-to-square me-2"></i> Practice {{ rec.skill_name }} Sets
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

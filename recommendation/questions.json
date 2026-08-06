@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "skill": "Circle Graph",
+    "question": "Which graph is best used to represent parts of a whole?",
+    "options": ["Bar Graph", "Circle Graph", "Histogram", "Line Graph"],
+    "answer": "Circle Graph"
+  },
+  {
+    "id": 2,
+    "skill": "Circle Graph",
+    "question": "If a pie chart sector represents 25% of the data, what is its central angle?",
+    "options": ["45°", "60°", "90°", "120°"],
+    "answer": "90°"
+  },
+  {
+    "id": 3,
+    "skill": "Circle Graph",
+    "question": "The sum of all central angles in a complete Circle Graph must equal:",
+    "options": ["180°", "270°", "360°", "100°"],
+    "answer": "360°"
+  },
+  {
+    "id": 4,
+    "skill": "Circle Graph",
+    "question": "In a survey of 100 people, if 35 choose blue, what percentage does the blue sector represent?",
+    "options": ["25%", "35%", "50%", "70%"],
+    "answer": "35%"
+  },
+  {
+    "id": 5,
+    "skill": "Circle Graph",
+    "question": "Half of a circle graph represents what fraction of the total dataset?",
+    "options": ["1/4", "1/3", "1/2", "3/4"],
+    "answer": "1/2"
+  },
+  {
+    "id": 6,
+    "skill": "Median",
+    "question": "Find the median of 2, 4, 6.",
+    "options": ["2", "3", "4", "6"],
+    "answer": "4"
+  },
+  {
+    "id": 7,
+    "skill": "Median",
+    "question": "What is the median of the dataset: 3, 7, 1, 9, 5?",
+    "options": ["3", "5", "7", "9"],
+    "answer": "5"
+  },
+  {
+    "id": 8,
+    "skill": "Median",
+    "question": "Find the median of the even dataset: 10, 20, 30, 40.",
+    "options": ["20", "25", "30", "35"],
+    "answer": "25"
+  },
+  {
+    "id": 9,
+    "skill": "Median",
+    "question": "Before finding the median of a list of numbers, you must first:",
+    "options": ["Add them together", "Order them from smallest to largest", "Multiply them", "Divide by N"],
+    "answer": "Order them from smallest to largest"
+  },
+  {
+    "id": 10,
+    "skill": "Median",
+    "question": "Find the median of: 12, 15, 12, 20, 18.",
+    "options": ["12", "15", "18", "20"],
+    "answer": "15"
+  },
+  {
+    "id": 11,
+    "skill": "Equivalent Fractions",
+    "question": "Which fraction is equivalent to 1/2?",
+    "options": ["2/3", "3/4", "2/4", "4/5"],
+    "answer": "2/4"
+  },
+  {
+    "id": 12,
+    "skill": "Equivalent Fractions",
+    "question": "Which fraction is equivalent to 3/4?",
+    "options": ["6/8", "5/8", "9/16", "7/12"],
+    "answer": "6/8"
+  },
+  {
+    "id": 13,
+    "skill": "Equivalent Fractions",
+    "question": "Simplify 10/15 to its lowest terms.",
+    "options": ["1/2", "2/3", "3/4", "4/5"],
+    "answer": "2/3"
+  },
+  {
+    "id": 14,
+    "skill": "Equivalent Fractions",
+    "question": "Which fraction is equal to 4/5 with a denominator of 20?",
+    "options": ["12/20", "14/20", "16/20", "18/20"],
+    "answer": "16/20"
+  },
+  {
+    "id": 15,
+    "skill": "Equivalent Fractions",
+    "question": "Are 2/6 and 1/3 equivalent fractions?",
+    "options": ["Yes", "No", "Only for even numbers", "Cannot be determined"],
+    "answer": "Yes"
+  },
+  {
+    "id": 16,
+    "skill": "Finding Percents",
+    "question": "25% of 200 is:",
+    "options": ["25", "50", "75", "100"],
+    "answer": "50"
+  },
+  {
+    "id": 17,
+    "skill": "Finding Percents",
+    "question": "What is 10% of 150?",
+    "options": ["10", "15", "20", "25"],
+    "answer": "15"
+  },
+  {
+    "id": 18,
+    "skill": "Finding Percents",
+    "question": "50% of a number is 40. What is the number?",
+    "options": ["60", "70", "80", "90"],
+    "answer": "80"
+  },
+  {
+    "id": 19,
+    "skill": "Finding Percents",
+    "question": "Express 0.75 as a percentage.",
+    "options": ["7.5%", "75%", "0.75%", "750%"],
+    "answer": "75%"
+  },
+  {
+    "id": 20,
+    "skill": "Finding Percents",
+    "question": "A $100 jacket is on sale for 20% off. How much discount do you get?",
+    "options": ["$10", "$15", "$20", "$25"],
+    "answer": "$20"
+  },
+  {
+    "id": 21,
+    "skill": "Proportion",
+    "question": "If 2:4 = x:8, then x = ?",
+    "options": ["2", "4", "6", "8"],
+    "answer": "4"
+  },
+  {
+    "id": 22,
+    "skill": "Proportion",
+    "question": "Solve the proportion 3/5 = x/15.",
+    "options": ["6", "9", "12", "10"],
+    "answer": "9"
+  },
+  {
+    "id": 23,
+    "skill": "Proportion",
+    "question": "If 4 pens cost $8, how much do 10 pens cost?",
+    "options": ["$16", "$18", "$20", "$24"],
+    "answer": "$20"
+  },
+  {
+    "id": 24,
+    "skill": "Proportion",
+    "question": "Solve for y in the ratio 2/y = 6/18.",
+    "options": ["4", "5", "6", "8"],
+    "answer": "6"
+  },
+  {
+    "id": 25,
+    "skill": "Proportion",
+    "question": "A car travels 120 miles in 2 hours. At the same rate, how far does it travel in 5 hours?",
+    "options": ["240 miles", "300 miles", "360 miles", "400 miles"],
+    "answer": "300 miles"
+  },
+  {
+    "id": 26,
+    "skill": "Reading a Ruler",
+    "question": "How many centimeters are in one meter?",
+    "options": ["10", "100", "1000", "50"],
+    "answer": "100"
+  },
+  {
+    "id": 27,
+    "skill": "Reading a Ruler",
+    "question": "How many millimeters are in 1 centimeter?",
+    "options": ["5", "10", "100", "1000"],
+    "answer": "10"
+  },
+  {
+    "id": 28,
+    "skill": "Reading a Ruler",
+    "question": "Half a centimeter is equal to how many millimeters?",
+    "options": ["2 mm", "5 mm", "50 mm", "0.5 mm"],
+    "answer": "5 mm"
+  },
+  {
+    "id": 29,
+    "skill": "Reading a Ruler",
+    "question": "What metric unit is best suited for measuring the length of a desk?",
+    "options": ["Kilometers", "Meters / Centimeters", "Nanometers", "Miles"],
+    "answer": "Meters / Centimeters"
+  },
+  {
+    "id": 30,
+    "skill": "Reading a Ruler",
+    "question": "2.5 meters is equal to how many centimeters?",
+    "options": ["25 cm", "250 cm", "2500 cm", "0.25 cm"],
+    "answer": "250 cm"
+  },
+  {
+    "id": 31,
+    "skill": "Quadratic Formula",
+    "question": "The quadratic formula is used to solve:",
+    "options": ["Linear Equations", "Quadratic Equations", "Fractions", "Ratios"],
+    "answer": "Quadratic Equations"
+  },
+  {
+    "id": 32,
+    "skill": "Quadratic Formula",
+    "question": "In standard quadratic form ax² + bx + c = 0, what is the formula for the discriminant?",
+    "options": ["b² - 4ac", "4ac - b²", "2a + b", "b² + 4ac"],
+    "answer": "b² - 4ac"
+  },
+  {
+    "id": 33,
+    "skill": "Quadratic Formula",
+    "question": "If b² - 4ac > 0, how many real roots does the quadratic equation have?",
+    "options": ["0", "1", "2", "Infinitely many"],
+    "answer": "2"
+  },
+  {
+    "id": 34,
+    "skill": "Quadratic Formula",
+    "question": "What are the roots of x² - 4 = 0?",
+    "options": ["x = 4", "x = 2 and x = -2", "x = 0", "x = 16"],
+    "answer": "x = 2 and x = -2"
+  },
+  {
+    "id": 35,
+    "skill": "Quadratic Formula",
+    "question": "What is the denominator in the quadratic formula x = (-b ± √(b² - 4ac)) / ?",
+    "options": ["a", "2a", "4a", "b"],
+    "answer": "2a"
+  },
+  {
+    "id": 36,
+    "skill": "Systems of Linear Equations",
+    "question": "Two linear equations together form a:",
+    "options": ["Circle", "Polynomial", "System", "Fraction"],
+    "answer": "System"
+  },
+  {
+    "id": 37,
+    "skill": "Systems of Linear Equations",
+    "question": "If x + y = 5 and x - y = 1, what is the value of x?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3"
+  },
+  {
+    "id": 38,
+    "skill": "Systems of Linear Equations",
+    "question": "The point where two lines intersect on a graph represents the system's:",
+    "options": ["Slope", "Solution", "Y-intercept", "Origin"],
+    "answer": "Solution"
+  },
+  {
+    "id": 39,
+    "skill": "Systems of Linear Equations",
+    "question": "If two lines on a graph are parallel, how many solutions does the system have?",
+    "options": ["1 solution", "2 solutions", "No solution", "Infinitely many"],
+    "answer": "No solution"
+  },
+  {
+    "id": 40,
+    "skill": "Systems of Linear Equations",
+    "question": "Solve for y in the system: x + y = 10, x = 6.",
+    "options": ["2", "4", "6", "8"],
+    "answer": "4"
+  },
+  {
+    "id": 41,
+    "skill": "Multiplication Whole Numbers",
+    "question": "15 × 6 = ?",
+    "options": ["80", "90", "100", "95"],
+    "answer": "90"
+  },
+  {
+    "id": 42,
+    "skill": "Multiplication Whole Numbers",
+    "question": "12 × 12 = ?",
+    "options": ["124", "134", "144", "154"],
+    "answer": "144"
+  },
+  {
+    "id": 43,
+    "skill": "Multiplication Whole Numbers",
+    "question": "25 × 4 = ?",
+    "options": ["75", "100", "125", "150"],
+    "answer": "100"
+  },
+  {
+    "id": 44,
+    "skill": "Multiplication Whole Numbers",
+    "question": "What is 11 × 15?",
+    "options": ["155", "165", "175", "185"],
+    "answer": "165"
+  },
+  {
+    "id": 45,
+    "skill": "Multiplication Whole Numbers",
+    "question": "A box contains 8 packets of 20 chocolates each. How many chocolates total?",
+    "options": ["120", "140", "160", "180"],
+    "answer": "160"
+  },
+  {
+    "id": 46,
+    "skill": "Computation with Real Numbers",
+    "question": "√81 = ?",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9"
+  },
+  {
+    "id": 47,
+    "skill": "Computation with Real Numbers",
+    "question": "What is (-5) + 8?",
+    "options": ["-3", "3", "-13", "13"],
+    "answer": "3"
+  },
+  {
+    "id": 48,
+    "skill": "Computation with Real Numbers",
+    "question": "What is (-4) × (-6)?",
+    "options": ["-24", "24", "-10", "10"],
+    "answer": "24"
+  },
+  {
+    "id": 49,
+    "skill": "Computation with Real Numbers",
+    "question": "Evaluate 2³ + 5:",
+    "options": ["11", "13", "15", "17"],
+    "answer": "13"
+  },
+  {
+    "id": 50,
+    "skill": "Computation with Real Numbers",
+    "question": "What is √144?",
+    "options": ["10", "11", "12", "14"],
+    "answer": "12"
+  }
+]
