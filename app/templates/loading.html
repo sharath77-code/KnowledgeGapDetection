@@ -6,7 +6,7 @@
 <div class="container py-5 text-center my-auto">
     <div class="max-w-600 mx-auto py-5">
         
-        <!-- Radar Neural Scanner Animation Container -->
+        <!-- Radar Scanner Animation Container -->
         <div class="radar-scanner-container mb-4">
             <div class="radar-circle"></div>
             <div class="radar-sweep"></div>
@@ -16,17 +16,17 @@
         </div>
 
         <span class="badge badge-brand mb-3 fs-6">
-            <i class="fas fa-microchip me-1"></i> XGBoost Neural Classifier Active
+            <i class="fas fa-sparkles me-1"></i> Intelligent Diagnostic System Active
         </span>
 
-        <h2 class="font-heading fw-bold mb-2">Analyzing your performance using AI...</h2>
-        <p class="text-muted mb-4">Please wait while the Machine Learning model processes your quiz metrics.</p>
+        <h2 class="font-heading fw-bold mb-2">Evaluating Your Assessment Answers...</h2>
+        <p class="text-muted mb-4">Please wait while EduGap AI analyzes your response patterns and conceptual accuracy.</p>
 
         <!-- Dynamic Loading Status Ticker Box -->
         <div class="glass-card p-3 max-w-450 mx-auto text-start">
             <div class="d-flex align-items-center gap-3 mb-2">
                 <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
-                <span id="loadingStepText" class="fw-semibold small text-primary">Extracting assessment feature metrics...</span>
+                <span id="loadingStepText" class="fw-semibold small text-primary">Evaluating question responses & timing patterns...</span>
             </div>
             
             <div class="progress-container mb-0" style="height: 6px;">
@@ -43,10 +43,10 @@
         const progressBar = document.getElementById('loadingProgressBar');
 
         const steps = [
-            { text: "Extracting response features & time metrics...", pct: "30%" },
-            { text: "Running XGBoost Knowledge Gap Classifier...", pct: "65%" },
-            { text: "Decoding skill deficiencies & recommendations...", pct: "90%" },
-            { text: "Generating visual analytics dashboard...", pct: "100%" }
+            { text: "Evaluating question responses & timing patterns...", pct: "30%" },
+            { text: "Identifying concept mastery & knowledge gaps...", pct: "65%" },
+            { text: "Building personalized study recommendations...", pct: "90%" },
+            { text: "Preparing performance analytics dashboard...", pct: "100%" }
         ];
 
         let index = 0;
