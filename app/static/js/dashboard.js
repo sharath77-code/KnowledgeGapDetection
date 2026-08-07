@@ -51,22 +51,46 @@ window.renderDashboardCharts = function() {
         });
     }
 
-    // 2. Bar Chart - Skill-wise Performance
+    // 2. Bar Chart - Skill-wise Performance (All 10 Skills Explicitly Rendered)
     const ctxBar = document.getElementById('skillPerformanceChart')?.getContext('2d');
     if (ctxBar) {
         if (window.barChartInstance) window.barChartInstance.destroy();
 
+        // Helper to format long skill names for X-axis
+        const formatSkillLabel = (name) => {
+            if (!name) return '';
+            const map = {
+                'Equivalent Fractions': 'Equiv. Fractions',
+                'Finding Percents': 'Find Percents',
+                'Quadratic Formula': 'Quadratic Form.',
+                'Multiplication Whole Numbers': 'Mult. Whole Nums',
+                'Computation with Real Numbers': 'Real Num. Comp.',
+                'Systems of Linear Equations': 'Linear Systems',
+                'Reading a Ruler': 'Read Ruler'
+            };
+            return map[name] || name;
+        };
+
+        const rawLabels = chartData.skills || [];
+        const rawScores = chartData.skillScores || [];
+        const formattedLabels = rawLabels.map(formatSkillLabel);
+
+        // Visual height data: 0% gets a 4% visual red stub so it's clearly visible
+        const visualScores = rawScores.map(score => score === 0 ? 4 : score);
+        const barColors = rawScores.map(score => score < 50 ? 'rgba(239, 68, 68, 0.85)' : 'rgba(16, 185, 129, 0.85)');
+        const borderColors = rawScores.map(score => score < 50 ? '#ef4444' : '#10b981');
+
         window.barChartInstance = new Chart(ctxBar, {
             type: 'bar',
             data: {
-                labels: chartData.skills,
+                labels: formattedLabels,
                 datasets: [{
-                    label: 'Skill Mastery (%)',
-                    data: chartData.skillScores,
-                    backgroundColor: chartData.skillScores.map(score => 
-                        score < 50 ? '#ef4444' : score < 75 ? '#f59e0b' : '#6366f1'
-                    ),
-                    borderRadius: 8,
+                    label: 'Skill Accuracy (%)',
+                    data: visualScores,
+                    backgroundColor: barColors,
+                    borderColor: borderColors,
+                    borderWidth: 1,
+                    borderRadius: 6,
                     borderSkipped: false
                 }]
             },
@@ -81,12 +105,32 @@ window.renderDashboardCharts = function() {
                         grid: { color: gridColor }
                     },
                     x: {
-                        ticks: { color: textColor },
+                        ticks: {
+                            color: textColor,
+                            font: { family: 'Inter', size: 10, weight: 600 },
+                            autoSkip: false, // Force render ALL 10 labels!
+                            maxRotation: 45,
+                            minRotation: 30
+                        },
                         grid: { display: false }
                     }
                 },
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: (items) => {
+                                const idx = items[0].dataIndex;
+                                return rawLabels[idx] || items[0].label;
+                            },
+                            label: (item) => {
+                                const idx = item.dataIndex;
+                                const realScore = rawScores[idx];
+                                const status = realScore >= 70 ? 'Proficient (100%)' : 'Needs Review (0%)';
+                                return ` Mastery: ${status}`;
+                            }
+                        }
+                    }
                 }
             }
         });
