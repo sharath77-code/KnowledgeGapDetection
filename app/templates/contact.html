@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Contact & Support — EduGap AI Platform{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    
+    <!-- Header Banner -->
+    <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="badge badge-brand mb-2">
+            <i class="fas fa-headset me-1"></i> Help & Support Center
+        </span>
+        <h1 class="font-heading fw-bold">Get in Touch with <span class="gradient-text">EduGap Support</span></h1>
+        <p class="text-secondary fs-5">Have questions about online assessments, knowledge gap diagnostics, or personalized study materials? We are here to help.</p>
+    </div>
+
+    <!-- Contact & Feedback Grid -->
+    <div class="row g-4 mb-5">
+        <!-- Contact Info Cards -->
+        <div class="col-lg-5">
+            <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+                <div>
+                    <h4 class="font-heading fw-bold mb-4 text-primary"><i class="fas fa-location-dot me-2"></i> Platform Support Hub</h4>
+                    
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="feature-icon-box flex-shrink-0" style="width:44px; height:44px; font-size:1.2rem;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Email Support</h6>
+                            <p class="text-muted small mb-0">support@edugap.ai &bull; info@edugap.ai</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="feature-icon-box flex-shrink-0" style="width:44px; height:44px; font-size:1.2rem; background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Support Hours</h6>
+                            <p class="text-muted small mb-0">Monday – Friday: 9:00 AM – 6:00 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="feature-icon-box flex-shrink-0" style="width:44px; height:44px; font-size:1.2rem; background: linear-gradient(135deg, #10b981, #059669);">
+                            <i class="fas fa-circle-question"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Instant Student Help</h6>
+                            <p class="text-muted small mb-0">Access FAQs or submit feedback directly through the form.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-3" style="background: rgba(99, 102, 241, 0.08); border: 1px dashed var(--border-glow);">
+                    <p class="text-muted extra-small mb-0 text-center">
+                        <i class="fas fa-shield-heart me-1 text-primary"></i> Dedicated to improving educational outcomes for students & teachers worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Feedback Form -->
+        <div class="col-lg-7">
+            <div class="glass-panel p-4 p-md-5">
+                <h4 class="font-heading fw-bold mb-3"><i class="fas fa-paper-plane text-brand me-2"></i> Send Us Your Feedback</h4>
+                <p class="text-secondary small mb-4">Fill out the form below to ask questions, request assistance, or share platform feedback.</p>
+
+                <form id="contactForm" onsubmit="event.preventDefault(); showToast('Thank you! Your message has been sent successfully.', 'success');">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-muted small fw-bold">Full Name</label>
+                            <input type="text" class="form-control glass-input" placeholder="e.g. Rahul Sharma" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-muted small fw-bold">Email Address</label>
+                            <input type="email" class="form-control glass-input" placeholder="e.g. student@institution.edu" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-muted small fw-bold">Subject</label>
+                            <select class="form-select glass-input">
+                                <option>General Inquiry</option>
+                                <option>Assessment & Quiz Assistance</option>
+                                <option>Learning Recommendations & Video Notes</option>
+                                <option>Platform Feedback</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-muted small fw-bold">Your Message / Feedback</label>
+                            <textarea class="form-control glass-input" rows="4" placeholder="How can we assist your learning journey?" required></textarea>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-brand btn-lg py-3 px-5">
+                                <i class="fas fa-paper-plane me-2"></i> Submit Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frequently Asked Questions (FAQ) Section -->
+    <div class="glass-panel p-4 p-md-5">
+        <div class="text-center mb-4">
+            <span class="badge badge-brand mb-2">Student FAQ</span>
+            <h3 class="font-heading fw-bold">Frequently Asked Questions</h3>
+        </div>
+
+        <div class="accordion accordion-custom" id="faqAccordion">
+            <div class="accordion-item glass-card mb-3 border-0">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button glass-card text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                        <i class="fas fa-circle-question text-primary me-2"></i> How does EduGap AI detect my knowledge gaps?
+                    </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                        EduGap AI evaluates your response accuracy and question difficulty patterns across online assessments. It automatically flags specific concepts where you struggled and organizes them into prioritized learning recommendations.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card mb-3 border-0">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button glass-card text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                        <i class="fas fa-circle-question text-info me-2"></i> What study resources are recommended after an assessment?
+                    </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                        For every identified weak skill, the platform delivers verified Khan Academy video tutorials, comprehensive academic study notebooks with solved examples, downloadable PDF notes, and targeted practice problem sets.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card mb-3 border-0">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                    <button class="accordion-button glass-card text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                        <i class="fas fa-circle-question text-warning me-2"></i> Can teachers use this platform to track class progress?
+                    </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                        Yes! Educators can review overall class performance dashboards, identify common conceptual bottlenecks across students, and deliver targeted classroom interventions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -44,13 +44,19 @@
                         <a class="nav-link nav-link-custom" href="{{ url_for('home') }}"><i class="fas fa-home me-1"></i> Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="{{ url_for('about') }}"><i class="fas fa-circle-info me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="{{ url_for('instructions') }}"><i class="fas fa-user-graduate me-1"></i> Assessment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="{{ url_for('result') }}"><i class="fas fa-chart-line me-1"></i> Analytics</a>
+                        <a class="nav-link nav-link-custom" href="{{ url_for('analytics') }}"><i class="fas fa-chart-line me-1"></i> Analytics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="{{ url_for('recommendations') }}"><i class="fas fa-lightbulb me-1"></i> Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="{{ url_for('contact') }}"><i class="fas fa-envelope me-1"></i> Contact</a>
                     </li>
                 </ul>
 
@@ -94,24 +100,38 @@
     <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;"></div>
 
     <!-- Glassmorphic Footer -->
-    <footer class="footer-custom">
+    <footer class="footer-custom mt-5">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <h5 class="navbar-brand-text mb-2">Knowledge Gap Detection System</h5>
+                <div class="col-lg-5">
+                    <h5 class="navbar-brand-text mb-2">EduGap AI — Smart Learning Platform</h5>
                     <p class="text-muted small mb-0">
-                        Final Year Engineering Project &bull; Powered by Hybrid Machine Learning, XGBoost & ASSISTments Dataset.
+                        An AI-powered Intelligent Tutoring Platform that evaluates student performance through online assessments, detects knowledge gaps, and delivers personalized learning recommendations.
                     </p>
                 </div>
-                <div class="col-lg-6 text-lg-end">
-                    <div class="d-flex gap-2 justify-content-lg-end flex-wrap mb-2">
-                        <span class="badge badge-brand">Flask</span>
-                        <span class="badge badge-brand">Hybrid ML</span>
-                        <span class="badge badge-brand">XGBoost</span>
-                        <span class="badge badge-brand">Chart.js</span>
-                        <span class="badge badge-brand">ASSISTments 2009</span>
+                <div class="col-lg-7">
+                    <div class="d-flex gap-3 justify-content-lg-end flex-wrap mb-2">
+                        <a href="{{ url_for('home') }}" class="text-muted small text-decoration-none">Home</a>
+                        <span class="text-muted small">&bull;</span>
+                        <a href="{{ url_for('about') }}" class="text-muted small text-decoration-none">About</a>
+                        <span class="text-muted small">&bull;</span>
+                        <a href="{{ url_for('instructions') }}" class="text-muted small text-decoration-none">Assessment</a>
+                        <span class="text-muted small">&bull;</span>
+                        <a href="{{ url_for('analytics') }}" class="text-muted small text-decoration-none">Results & Analytics</a>
+                        <span class="text-muted small">&bull;</span>
+                        <a href="{{ url_for('recommendations') }}" class="text-muted small text-decoration-none">Learning Resources</a>
+                        <span class="text-muted small">&bull;</span>
+                        <a href="{{ url_for('contact') }}" class="text-muted small text-decoration-none">Contact</a>
+                        <span class="text-muted small">&bull;</span>
+                        <a href="{{ url_for('privacy') }}" class="text-muted small text-decoration-none">Privacy Policy</a>
                     </div>
-                    <p class="text-muted small mb-0">&copy; 2026 Intelligent Tutoring System. All Rights Reserved.</p>
+                    <div class="d-flex gap-2 justify-content-lg-end flex-wrap mb-2">
+                        <span class="badge badge-brand"><i class="fas fa-brain me-1"></i> Smart Diagnostics</span>
+                        <span class="badge badge-brand"><i class="fas fa-lightbulb me-1"></i> Personalized Learning</span>
+                        <span class="badge badge-brand"><i class="fas fa-chart-line me-1"></i> Real-Time Analytics</span>
+                        <span class="badge badge-brand"><i class="fas fa-circle-check me-1"></i> Continuous Growth</span>
+                    </div>
+                    <p class="text-muted small mb-0 text-lg-end">&copy; 2026 EduGap AI Intelligent Learning Platform. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

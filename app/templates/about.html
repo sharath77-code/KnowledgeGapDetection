@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}About EduGap AI — Intelligent Tutoring & Personalized Learning Platform{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    
+    <!-- About Header Banner -->
+    <div class="glass-panel p-4 p-md-5 mb-5 text-center position-relative overflow-hidden">
+        <span class="badge badge-brand mb-3">
+            <i class="fas fa-graduation-cap me-1"></i> Intelligent Learning Platform
+        </span>
+        <h1 class="font-heading fw-bold mb-3">About <span class="gradient-text">EduGap AI</span></h1>
+        <p class="text-secondary max-w-700 mx-auto fs-5 mb-0">
+            An AI-powered Intelligent Tutoring System designed to help students improve their learning by identifying weak concepts after online assessments and providing personalized study resources.
+        </p>
+    </div>
+
+    <!-- Why Choose EduGap AI -->
+    <div class="row g-4 align-items-center mb-5">
+        <div class="col-lg-6">
+            <div class="glass-card p-4 p-md-5 h-100">
+                <span class="badge badge-brand mb-3">Platform Mission</span>
+                <h3 class="font-heading fw-bold mb-3">Why Choose EduGap AI?</h3>
+                <p class="text-secondary fs-5 lh-lg mb-3">
+                    Traditional online tests only provide numerical scores without explaining why a student struggled or which concepts need revision.
+                </p>
+                <p class="text-secondary fs-5 lh-lg mb-0">
+                    <strong>EduGap AI goes beyond marks</strong> by analyzing student performance, identifying weak learning areas, and recommending personalized study materials that help students improve continuously. Students receive meaningful feedback instead of just marks.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="feature-icon-box mx-auto mb-3">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Smart Evaluation</h5>
+                        <p class="text-muted small mb-0">Detects cognitive misconception bottlenecks.</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="feature-icon-box mx-auto mb-3" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Tailored Study</h5>
+                        <p class="text-muted small mb-0">Curated videos, study notes & worksheets.</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="feature-icon-box mx-auto mb-3" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Visual Feedback</h5>
+                        <p class="text-muted small mb-0">Interactive dashboards & progress charts.</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="glass-card p-4 text-center h-100">
+                        <div class="feature-icon-box mx-auto mb-3" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Self-Paced Mastery</h5>
+                        <p class="text-muted small mb-0">Empowers independent student growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importance & Benefits Grid -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100">
+                <h4 class="font-heading fw-bold mb-3 text-primary">
+                    <i class="fas fa-bullseye me-2"></i> Importance of Gap Detection
+                </h4>
+                <p class="text-muted mb-0">
+                    When a student fails to master a foundational concept early on, subsequent advanced topics become significantly harder to understand. By pinpointing exact knowledge gaps immediately after an assessment, EduGap AI prevents cumulative learning loss and builds a rock-solid academic foundation.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100">
+                <h4 class="font-heading fw-bold mb-3 text-info">
+                    <i class="fas fa-book-open-reader me-2"></i> How Personalized Learning Helps
+                </h4>
+                <p class="text-muted mb-0">
+                    Every student learns at a different pace. Instead of generic textbook revisions, personalized learning targets the specific weak skills of each individual student with structured video lessons, concise master study summaries, and focused practice exercises.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step-by-Step System Workflow -->
+    <div class="glass-panel p-4 p-md-5 mb-5">
+        <div class="text-center mb-4">
+            <span class="badge badge-brand mb-2">Complete System Process</span>
+            <h3 class="font-heading fw-bold">How the Platform Works</h3>
+            <p class="text-muted">A seamless 9-step learning journey from evaluation to concept mastery.</p>
+        </div>
+
+        <div class="row g-3">
+            {% set workflow_steps = [
+                ("1", "Student Login", "Secure authentication and profile identification."),
+                ("2", "Read Instructions", "Review assessment guidelines and question format."),
+                ("3", "Take Online Assessment", "Complete engaging conceptual multiple-choice questions."),
+                ("4", "Submit Responses", "Submit completed quiz for automated evaluation."),
+                ("5", "AI Evaluates Performance", "System analyzes correct and incorrect response patterns."),
+                ("6", "Knowledge Gap Detection", "Detects overall remediation gap level and index."),
+                ("7", "Weak Skill Identification", "Flags specific topics needing concept review."),
+                ("8", "Personalized Recommendations", "Generates video lessons, notes & practice worksheets."),
+                ("9", "Performance Dashboard", "Track growth and visual progress analytics.")
+            ] %}
+
+            {% for num, title, desc in workflow_steps %}
+            <div class="col-md-4">
+                <div class="glass-card p-3 h-100 d-flex align-items-start gap-3">
+                    <div class="step-number-badge mb-0 flex-shrink-0" style="width:36px; height:36px; font-size:1rem;">{{ num }}</div>
+                    <div>
+                        <h6 class="fw-bold mb-1">{{ title }}</h6>
+                        <p class="text-muted extra-small mb-0">{{ desc }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Student Benefits vs Teacher Benefits -->
+    <div class="row g-4 mb-5">
+        <!-- Student Benefits -->
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100 border-start border-primary border-4">
+                <h4 class="font-heading fw-bold mb-3 text-primary">
+                    <i class="fas fa-user-graduate me-2"></i> Benefits for Students
+                </h4>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0 text-muted">
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success"></i> Understand exact weak concepts clearly
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success"></i> Receive personalized learning resources
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success"></i> Improve conceptual problem-solving skills
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success"></i> Track individual learning progress over time
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success"></i> Build academic confidence before formal exams
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success"></i> Learn at an individual comfortable pace
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Teacher Benefits -->
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100 border-start border-info border-4">
+                <h4 class="font-heading fw-bold mb-3 text-info">
+                    <i class="fas fa-chalkboard-user me-2"></i> Benefits for Teachers & Educators
+                </h4>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0 text-muted">
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-info"></i> Monitor student performance effectively
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-info"></i> Identify common weak topics across the class
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-info"></i> Track overall class progress and growth
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-info"></i> Provide targeted classroom guidance & remediation
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-info"></i> Significantly improve institutional learning outcomes
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Future Scope Card -->
+    <div class="glass-card p-4 p-md-5 text-center">
+        <h4 class="font-heading fw-bold mb-3"><i class="fas fa-rocket text-warning me-2"></i> Future Roadmap & Expansion</h4>
+        <p class="text-muted max-w-700 mx-auto mb-4">
+            We are continuously enhancing EduGap AI to include multi-subject diagnostic modules, gamified learning achievements, interactive virtual tutoring assistants, and collaborative peer learning pathways.
+        </p>
+        <a href="{{ url_for('instructions') }}" class="btn btn-brand btn-lg">
+            <i class="fas fa-play me-2"></i> Experience Assessment Now
+        </a>
+    </div>
+
+</div>
+{% endblock %}
