@@ -596,35 +596,95 @@ SKILL_VIDEO_MAPPING = {
         "edu_url": "https://www.youtube.com/results?search_query=Median+statistics+math+lesson",
         "web_url": "https://www.google.com/search?tbm=vid&q=Median+statistics+math+tutorial"
     },
-    "Mode": {
-        "embed_url": "https://www.youtube.com/embed/B1HEzNTGeZ4",
-        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Mode",
-        "edu_url": "https://www.youtube.com/results?search_query=Mode+statistics+math+lesson",
-        "web_url": "https://www.google.com/search?tbm=vid&q=Mode+statistics+math+tutorial"
-    },
-    "Mean": {
-        "embed_url": "https://www.youtube.com/embed/B1HEzNTGeZ4",
-        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Mean",
-        "edu_url": "https://www.youtube.com/results?search_query=Mean+statistics+math+lesson",
-        "web_url": "https://www.google.com/search?tbm=vid&q=Mean+statistics+math+tutorial"
-    },
     "Proportion": {
         "embed_url": "https://www.youtube.com/embed/GO56OiUjzp0",
         "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Proportion",
         "edu_url": "https://www.youtube.com/results?search_query=Proportions+math+lesson",
         "web_url": "https://www.google.com/search?tbm=vid&q=Proportions+math+tutorial"
     },
-    "Percent Of": {
-        "embed_url": "https://www.youtube.com/embed/Uf-LCC0v7C4",
-        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Percent+Of",
-        "edu_url": "https://www.youtube.com/results?search_query=Finding+percent+of+a+number+math+lesson",
-        "web_url": "https://www.google.com/search?tbm=vid&q=Percent+of+a+number+math+tutorial"
+    "Quadratic Formula": {
+        "embed_url": "https://www.youtube.com/embed/i7idZfS8t8w",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Quadratic+Formula",
+        "edu_url": "https://www.youtube.com/results?search_query=Quadratic+formula+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Quadratic+formula+math+tutorial"
     },
-    "Solving Systems of Linear Equations": {
+    "Multiplication Whole Numbers": {
+        "embed_url": "https://www.youtube.com/embed/RVYwunbpMHA",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Multiplication",
+        "edu_url": "https://www.youtube.com/results?search_query=Multiplication+whole+numbers+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Multiplication+whole+numbers+math+tutorial"
+    },
+    "Computation with Real Numbers": {
+        "embed_url": "https://www.youtube.com/embed/d6vhko_Wf3g",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Real+Numbers",
+        "edu_url": "https://www.youtube.com/results?search_query=Computation+with+real+numbers+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Computation+with+real+numbers+math+tutorial"
+    },
+    "Systems of Linear Equations": {
         "embed_url": "https://www.youtube.com/embed/bAerID24QJ0",
         "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Systems+of+Linear+Equations",
         "edu_url": "https://www.youtube.com/results?search_query=Solving+systems+of+linear+equations+math+lesson",
         "web_url": "https://www.google.com/search?tbm=vid&q=Systems+of+linear+equations+math+tutorial"
+    },
+    "Pythagorean Theorem": {
+        "embed_url": "https://www.youtube.com/embed/AA6RfgP-AHU",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Pythagorean+Theorem",
+        "edu_url": "https://www.youtube.com/results?search_query=Pythagorean+theorem+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Pythagorean+theorem+math+tutorial"
+    },
+    "Probability and Statistics": {
+        "embed_url": "https://www.youtube.com/embed/UzxYlbK2c7E",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Probability",
+        "edu_url": "https://www.youtube.com/results?search_query=Probability+and+statistics+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Probability+and+statistics+math+tutorial"
+    },
+    "Exponents and Radicals": {
+        "embed_url": "https://www.youtube.com/embed/LwCRRUa8yTU",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Exponents+and+Radicals",
+        "edu_url": "https://www.youtube.com/results?search_query=Exponents+and+radicals+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Exponents+and+radicals+math+tutorial"
+    },
+    "Perimeter and Area": {
+        "embed_url": "https://www.youtube.com/embed/rSVmrpuo03c",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Perimeter+and+Area",
+        "edu_url": "https://www.youtube.com/results?search_query=Perimeter+and+area+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Perimeter+and+area+math+tutorial"
+    },
+    "Linear Functions and Slope": {
+        "embed_url": "https://www.youtube.com/embed/ADloWn0gEjs",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Linear+Functions",
+        "edu_url": "https://www.youtube.com/results?search_query=Linear+functions+and+slope+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Linear+functions+and+slope+math+tutorial"
+    },
+    "Polynomial Operations": {
+        "embed_url": "https://www.youtube.com/embed/ffLLmV4mZwU",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Polynomial+Operations",
+        "edu_url": "https://www.youtube.com/results?search_query=Polynomial+operations+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Polynomial+operations+math+tutorial"
+    },
+    "Trigonometric Ratios": {
+        "embed_url": "https://www.youtube.com/embed/PUB0TaZ7bhA",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Trigonometry",
+        "edu_url": "https://www.youtube.com/results?search_query=Trigonometric+ratios+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Trigonometric+ratios+math+tutorial"
+    },
+    "Logarithmic Functions": {
+        "embed_url": "https://www.youtube.com/embed/kqVpPSjY2xM",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Logarithmic+Functions",
+        "edu_url": "https://www.youtube.com/results?search_query=Logarithmic+functions+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Logarithmic+functions+math+tutorial"
+    },
+    "Matrices and Determinants": {
+        "embed_url": "https://www.youtube.com/embed/2uB23YnL0F0",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Matrices",
+        "edu_url": "https://www.youtube.com/results?search_query=Matrices+and+determinants+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Matrices+and+determinants+math+tutorial"
+    },
+    "Coordinate Geometry and Distance": {
+        "embed_url": "https://www.youtube.com/embed/0X8aK26N06k",
+        "khan_url": "https://www.khanacademy.org/search?referer=%2F&page_search_query=Coordinate+Geometry",
+        "edu_url": "https://www.youtube.com/results?search_query=Coordinate+geometry+math+lesson",
+        "web_url": "https://www.google.com/search?tbm=vid&q=Coordinate+geometry+math+tutorial"
     }
 }
 
@@ -658,6 +718,11 @@ def load_resources():
             key = skill.lower().replace(" ", "").replace("-", "")
             
             is_tested = key in tested_keys
+            
+            # STRICT FILTER: Only show recommendations for topics ATTENDED in student assessment!
+            if tested_keys and not is_tested:
+                continue
+
             score_pct = student_scores.get(key, 100.0)
 
             if is_tested and score_pct < 70.0:
@@ -762,6 +827,7 @@ def login():
         session['email'] = email
         session.pop('result_data', None)
         session.pop('active_quiz_questions', None)
+        session.pop('active_quiz_ids', None)
 
         next_url = request.args.get('next') or url_for('instructions')
         return redirect(next_url)
@@ -776,6 +842,7 @@ def login_post():
     session['email'] = request.form.get('email', 'student@institution.edu')
     session.pop('result_data', None)
     session.pop('active_quiz_questions', None)
+    session.pop('active_quiz_ids', None)
     return redirect(url_for('instructions'))
 
 @app.route("/logout")
@@ -786,10 +853,19 @@ def logout():
 @app.route("/instructions")
 @login_required
 def instructions():
+    session.pop('active_quiz_ids', None)
+    session.pop('active_quiz_questions', None)
     student_name = session.get('student_name', 'Student Candidate')
     register_number = session.get('register_number', '210101001')
     department = session.get('department', 'Computer Science')
     return render_template("instructions.html", student_name=student_name, register_number=register_number, department=department)
+
+@app.route("/new_quiz")
+@login_required
+def new_quiz():
+    session.pop('active_quiz_ids', None)
+    session.pop('active_quiz_questions', None)
+    return redirect(url_for('quiz'))
 
 @app.route("/quiz")
 @login_required
@@ -800,7 +876,7 @@ def quiz():
     if filter_skill:
         questions = all_questions
     else:
-        # Group questions by skill to ensure balanced 10-question assessment across 10 distinct skills
+        # Group questions by skill and shuffle skill order for dynamic topic sampling
         skill_groups = {}
         for q in all_questions:
             s = q.get('skill_name', q.get('skill', 'General Skill'))
@@ -808,18 +884,21 @@ def quiz():
                 skill_groups[s] = []
             skill_groups[s].append(q)
             
+        all_skills = list(skill_groups.keys())
+        random.shuffle(all_skills) # Randomize skill selection on every assessment run!
+        
         sampled = []
-        for s, q_list in skill_groups.items():
+        for s in all_skills:
             if len(sampled) < 10:
-                sampled.append(random.choice(q_list))
+                sampled.append(random.choice(skill_groups[s]))
                 
-        # Fill remaining slots if fewer than 10 skills
         if len(sampled) < 10:
             remaining = [q for q in all_questions if q not in sampled]
             needed = 10 - len(sampled)
             if remaining:
                 sampled.extend(random.sample(remaining, min(needed, len(remaining))))
             
+        random.shuffle(sampled) # Randomize question presentation order
         questions = sampled[:10]
 
     session['active_quiz_ids'] = [q['id'] for q in questions]
@@ -842,13 +921,15 @@ def submit():
 
     skill_stats = {}
     total_correct = 0
+    question_review = []
 
-    for q in questions:
+    for idx, q in enumerate(questions):
         q_id_str = str(q['id'])
         q_id_int = int(q['id'])
         skill = q.get('skill_name', q.get('skill', 'General Skill'))
         raw_correct_ans = str(q.get('answer', '')).strip()
         options = q.get('options', [])
+        q_text = q.get('question', f"Question #{idx+1}")
 
         if skill not in skill_stats:
             skill_stats[skill] = {"total": 0, "correct": 0, "wrong": 0}
@@ -860,7 +941,9 @@ def submit():
         if user_ans_idx is None:
             user_ans_idx = user_answers.get(q_id_int)
 
+        selected_opt_str = "Not Answered"
         is_correct = False
+
         if user_ans_idx is not None:
             try:
                 selected_idx = int(user_ans_idx)
@@ -908,6 +991,16 @@ def submit():
             total_correct += 1
         else:
             skill_stats[skill]["wrong"] += 1
+
+        question_review.append({
+            "number": idx + 1,
+            "question": q_text,
+            "skill": skill,
+            "selected": selected_opt_str,
+            "correct": raw_correct_ans,
+            "is_correct": is_correct,
+            "options": options
+        })
 
     total_questions = len(questions) if len(questions) > 0 else 10
     accuracy = round((total_correct / total_questions) * 100, 1)
@@ -1040,6 +1133,7 @@ def submit():
         "pytorch_logits": dl_logits_str,
         "weak_skills": weak_skills,
         "strengths": strengths,
+        "question_review": question_review,
         "skill_names_json": json.dumps(skill_names),
         "skill_scores_json": json.dumps(skill_scores)
     }
@@ -1064,7 +1158,6 @@ def result():
     
     if not result_data:
         tot_q = 10
-        
         result_data = {
             "student_name": session.get('student_name', 'Student Candidate'),
             "register_number": session.get('register_number', '210101001'),
@@ -1080,10 +1173,20 @@ def result():
             "gap_badge_class": "badge-brand",
             "weak_skills": [],
             "strengths": [],
+            "question_review": [],
             "skill_names_json": json.dumps([]),
             "skill_scores_json": json.dumps([])
         }
     return render_template("result.html", result_data=result_data)
+
+@app.route("/review")
+@login_required
+def review():
+    s_key = get_student_key()
+    result_data = session.get('result_data') or GLOBAL_RESULT_CACHE.get(s_key) or GLOBAL_RESULT_CACHE.get('latest_submission')
+    if not result_data:
+        return redirect(url_for('quiz'))
+    return render_template("review.html", result_data=result_data)
 
 @app.route("/recommendations")
 @login_required

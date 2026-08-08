@@ -200,11 +200,20 @@
 
     </div>
 
-    <!-- CTA Button to Recommendations -->
-    <div class="text-center py-3">
-        <a href="{{ url_for('recommendations') }}" class="btn btn-brand btn-lg py-3 px-5 fs-5">
-            <i class="fas fa-lightbulb me-2"></i> View AI Recommendations & Learning Path
-        </a>
+    <!-- CTA Action Bar -->
+    <div class="glass-panel p-4 mb-4 text-center">
+        <h4 class="font-heading fw-bold mb-3">What would you like to do next?</h4>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="{{ url_for('review') }}" class="btn btn-primary btn-lg py-3 px-4 fs-5 fw-bold shadow-sm">
+                <i class="fas fa-search me-2"></i> Review Assessment (Wrong & Correct Answers)
+            </a>
+            <a href="{{ url_for('recommendations') }}" class="btn btn-brand btn-lg py-3 px-4 fs-5">
+                <i class="fas fa-lightbulb me-2"></i> View AI Recommendations & Learning Path
+            </a>
+            <a href="{{ url_for('new_quiz') }}" class="btn btn-outline-brand btn-lg py-3 px-4 fs-5" style="border-width:2px;">
+                <i class="fas fa-redo me-2"></i> Retake New Assessment (Fresh Questions)
+            </a>
+        </div>
     </div>
 
 </div>
@@ -222,5 +231,21 @@
             window.renderDashboardCharts();
         }
     });
+
+    function filterReview(type, btnElement) {
+        const items = document.querySelectorAll('.review-card-item');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => btn.classList.remove('active'));
+        if (btnElement) btnElement.classList.add('active');
+
+        items.forEach(item => {
+            const status = item.getAttribute('data-status');
+            if (type === 'all' || status === type) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
 </script>
 {% endblock %}

@@ -1,352 +1,196 @@
 [
-  {
-    "id": 1,
-    "skill": "Circle Graph",
-    "question": "Which graph is best used to represent parts of a whole?",
-    "options": ["Bar Graph", "Circle Graph", "Histogram", "Line Graph"],
-    "answer": "Circle Graph"
-  },
-  {
-    "id": 2,
-    "skill": "Circle Graph",
-    "question": "If a pie chart sector represents 25% of the data, what is its central angle?",
-    "options": ["45°", "60°", "90°", "120°"],
-    "answer": "90°"
-  },
-  {
-    "id": 3,
-    "skill": "Circle Graph",
-    "question": "The sum of all central angles in a complete Circle Graph must equal:",
-    "options": ["180°", "270°", "360°", "100°"],
-    "answer": "360°"
-  },
-  {
-    "id": 4,
-    "skill": "Circle Graph",
-    "question": "In a survey of 100 people, if 35 choose blue, what percentage does the blue sector represent?",
-    "options": ["25%", "35%", "50%", "70%"],
-    "answer": "35%"
-  },
-  {
-    "id": 5,
-    "skill": "Circle Graph",
-    "question": "Half of a circle graph represents what fraction of the total dataset?",
-    "options": ["1/4", "1/3", "1/2", "3/4"],
-    "answer": "1/2"
-  },
-  {
-    "id": 6,
-    "skill": "Median",
-    "question": "Find the median of 2, 4, 6.",
-    "options": ["2", "3", "4", "6"],
-    "answer": "4"
-  },
-  {
-    "id": 7,
-    "skill": "Median",
-    "question": "What is the median of the dataset: 3, 7, 1, 9, 5?",
-    "options": ["3", "5", "7", "9"],
-    "answer": "5"
-  },
-  {
-    "id": 8,
-    "skill": "Median",
-    "question": "Find the median of the even dataset: 10, 20, 30, 40.",
-    "options": ["20", "25", "30", "35"],
-    "answer": "25"
-  },
-  {
-    "id": 9,
-    "skill": "Median",
-    "question": "Before finding the median of a list of numbers, you must first:",
-    "options": ["Add them together", "Order them from smallest to largest", "Multiply them", "Divide by N"],
-    "answer": "Order them from smallest to largest"
-  },
-  {
-    "id": 10,
-    "skill": "Median",
-    "question": "Find the median of: 12, 15, 12, 20, 18.",
-    "options": ["12", "15", "18", "20"],
-    "answer": "15"
-  },
-  {
-    "id": 11,
-    "skill": "Equivalent Fractions",
-    "question": "Which fraction is equivalent to 1/2?",
-    "options": ["2/3", "3/4", "2/4", "4/5"],
-    "answer": "2/4"
-  },
-  {
-    "id": 12,
-    "skill": "Equivalent Fractions",
-    "question": "Which fraction is equivalent to 3/4?",
-    "options": ["6/8", "5/8", "9/16", "7/12"],
-    "answer": "6/8"
-  },
-  {
-    "id": 13,
-    "skill": "Equivalent Fractions",
-    "question": "Simplify 10/15 to its lowest terms.",
-    "options": ["1/2", "2/3", "3/4", "4/5"],
-    "answer": "2/3"
-  },
-  {
-    "id": 14,
-    "skill": "Equivalent Fractions",
-    "question": "Which fraction is equal to 4/5 with a denominator of 20?",
-    "options": ["12/20", "14/20", "16/20", "18/20"],
-    "answer": "16/20"
-  },
-  {
-    "id": 15,
-    "skill": "Equivalent Fractions",
-    "question": "Are 2/6 and 1/3 equivalent fractions?",
-    "options": ["Yes", "No", "Only for even numbers", "Cannot be determined"],
-    "answer": "Yes"
-  },
-  {
-    "id": 16,
-    "skill": "Finding Percents",
-    "question": "25% of 200 is:",
-    "options": ["25", "50", "75", "100"],
-    "answer": "50"
-  },
-  {
-    "id": 17,
-    "skill": "Finding Percents",
-    "question": "What is 10% of 150?",
-    "options": ["10", "15", "20", "25"],
-    "answer": "15"
-  },
-  {
-    "id": 18,
-    "skill": "Finding Percents",
-    "question": "50% of a number is 40. What is the number?",
-    "options": ["60", "70", "80", "90"],
-    "answer": "80"
-  },
-  {
-    "id": 19,
-    "skill": "Finding Percents",
-    "question": "Express 0.75 as a percentage.",
-    "options": ["7.5%", "75%", "0.75%", "750%"],
-    "answer": "75%"
-  },
-  {
-    "id": 20,
-    "skill": "Finding Percents",
-    "question": "A $100 jacket is on sale for 20% off. How much discount do you get?",
-    "options": ["$10", "$15", "$20", "$25"],
-    "answer": "$20"
-  },
-  {
-    "id": 21,
-    "skill": "Proportion",
-    "question": "If 2:4 = x:8, then x = ?",
-    "options": ["2", "4", "6", "8"],
-    "answer": "4"
-  },
-  {
-    "id": 22,
-    "skill": "Proportion",
-    "question": "Solve the proportion 3/5 = x/15.",
-    "options": ["6", "9", "12", "10"],
-    "answer": "9"
-  },
-  {
-    "id": 23,
-    "skill": "Proportion",
-    "question": "If 4 pens cost $8, how much do 10 pens cost?",
-    "options": ["$16", "$18", "$20", "$24"],
-    "answer": "$20"
-  },
-  {
-    "id": 24,
-    "skill": "Proportion",
-    "question": "Solve for y in the ratio 2/y = 6/18.",
-    "options": ["4", "5", "6", "8"],
-    "answer": "6"
-  },
-  {
-    "id": 25,
-    "skill": "Proportion",
-    "question": "A car travels 120 miles in 2 hours. At the same rate, how far does it travel in 5 hours?",
-    "options": ["240 miles", "300 miles", "360 miles", "400 miles"],
-    "answer": "300 miles"
-  },
-  {
-    "id": 26,
-    "skill": "Reading a Ruler",
-    "question": "How many centimeters are in one meter?",
-    "options": ["10", "100", "1000", "50"],
-    "answer": "100"
-  },
-  {
-    "id": 27,
-    "skill": "Reading a Ruler",
-    "question": "How many millimeters are in 1 centimeter?",
-    "options": ["5", "10", "100", "1000"],
-    "answer": "10"
-  },
-  {
-    "id": 28,
-    "skill": "Reading a Ruler",
-    "question": "Half a centimeter is equal to how many millimeters?",
-    "options": ["2 mm", "5 mm", "50 mm", "0.5 mm"],
-    "answer": "5 mm"
-  },
-  {
-    "id": 29,
-    "skill": "Reading a Ruler",
-    "question": "What metric unit is best suited for measuring the length of a desk?",
-    "options": ["Kilometers", "Meters / Centimeters", "Nanometers", "Miles"],
-    "answer": "Meters / Centimeters"
-  },
-  {
-    "id": 30,
-    "skill": "Reading a Ruler",
-    "question": "2.5 meters is equal to how many centimeters?",
-    "options": ["25 cm", "250 cm", "2500 cm", "0.25 cm"],
-    "answer": "250 cm"
-  },
-  {
-    "id": 31,
-    "skill": "Quadratic Formula",
-    "question": "The quadratic formula is used to solve:",
-    "options": ["Linear Equations", "Quadratic Equations", "Fractions", "Ratios"],
-    "answer": "Quadratic Equations"
-  },
-  {
-    "id": 32,
-    "skill": "Quadratic Formula",
-    "question": "In standard quadratic form ax² + bx + c = 0, what is the formula for the discriminant?",
-    "options": ["b² - 4ac", "4ac - b²", "2a + b", "b² + 4ac"],
-    "answer": "b² - 4ac"
-  },
-  {
-    "id": 33,
-    "skill": "Quadratic Formula",
-    "question": "If b² - 4ac > 0, how many real roots does the quadratic equation have?",
-    "options": ["0", "1", "2", "Infinitely many"],
-    "answer": "2"
-  },
-  {
-    "id": 34,
-    "skill": "Quadratic Formula",
-    "question": "What are the roots of x² - 4 = 0?",
-    "options": ["x = 4", "x = 2 and x = -2", "x = 0", "x = 16"],
-    "answer": "x = 2 and x = -2"
-  },
-  {
-    "id": 35,
-    "skill": "Quadratic Formula",
-    "question": "What is the denominator in the quadratic formula x = (-b ± √(b² - 4ac)) / ?",
-    "options": ["a", "2a", "4a", "b"],
-    "answer": "2a"
-  },
-  {
-    "id": 36,
-    "skill": "Systems of Linear Equations",
-    "question": "Two linear equations together form a:",
-    "options": ["Circle", "Polynomial", "System", "Fraction"],
-    "answer": "System"
-  },
-  {
-    "id": 37,
-    "skill": "Systems of Linear Equations",
-    "question": "If x + y = 5 and x - y = 1, what is the value of x?",
-    "options": ["2", "3", "4", "5"],
-    "answer": "3"
-  },
-  {
-    "id": 38,
-    "skill": "Systems of Linear Equations",
-    "question": "The point where two lines intersect on a graph represents the system's:",
-    "options": ["Slope", "Solution", "Y-intercept", "Origin"],
-    "answer": "Solution"
-  },
-  {
-    "id": 39,
-    "skill": "Systems of Linear Equations",
-    "question": "If two lines on a graph are parallel, how many solutions does the system have?",
-    "options": ["1 solution", "2 solutions", "No solution", "Infinitely many"],
-    "answer": "No solution"
-  },
-  {
-    "id": 40,
-    "skill": "Systems of Linear Equations",
-    "question": "Solve for y in the system: x + y = 10, x = 6.",
-    "options": ["2", "4", "6", "8"],
-    "answer": "4"
-  },
-  {
-    "id": 41,
-    "skill": "Multiplication Whole Numbers",
-    "question": "15 × 6 = ?",
-    "options": ["80", "90", "100", "95"],
-    "answer": "90"
-  },
-  {
-    "id": 42,
-    "skill": "Multiplication Whole Numbers",
-    "question": "12 × 12 = ?",
-    "options": ["124", "134", "144", "154"],
-    "answer": "144"
-  },
-  {
-    "id": 43,
-    "skill": "Multiplication Whole Numbers",
-    "question": "25 × 4 = ?",
-    "options": ["75", "100", "125", "150"],
-    "answer": "100"
-  },
-  {
-    "id": 44,
-    "skill": "Multiplication Whole Numbers",
-    "question": "What is 11 × 15?",
-    "options": ["155", "165", "175", "185"],
-    "answer": "165"
-  },
-  {
-    "id": 45,
-    "skill": "Multiplication Whole Numbers",
-    "question": "A box contains 8 packets of 20 chocolates each. How many chocolates total?",
-    "options": ["120", "140", "160", "180"],
-    "answer": "160"
-  },
-  {
-    "id": 46,
-    "skill": "Computation with Real Numbers",
-    "question": "√81 = ?",
-    "options": ["7", "8", "9", "10"],
-    "answer": "9"
-  },
-  {
-    "id": 47,
-    "skill": "Computation with Real Numbers",
-    "question": "What is (-5) + 8?",
-    "options": ["-3", "3", "-13", "13"],
-    "answer": "3"
-  },
-  {
-    "id": 48,
-    "skill": "Computation with Real Numbers",
-    "question": "What is (-4) × (-6)?",
-    "options": ["-24", "24", "-10", "10"],
-    "answer": "24"
-  },
-  {
-    "id": 49,
-    "skill": "Computation with Real Numbers",
-    "question": "Evaluate 2³ + 5:",
-    "options": ["11", "13", "15", "17"],
-    "answer": "13"
-  },
-  {
-    "id": 50,
-    "skill": "Computation with Real Numbers",
-    "question": "What is √144?",
-    "options": ["10", "11", "12", "14"],
-    "answer": "12"
-  }
+  {"id": 1, "skill": "Circle Graph", "question": "In a company budget pie chart, Salaries take up 144° of the central angle. If the total annual budget is $250,000, how much money is allocated to Salaries?", "options": ["$90,000", "$100,000", "$120,000", "$144,000"], "answer": "$100,000", "difficulty": "Medium"},
+  {"id": 2, "skill": "Circle Graph", "question": "A school district circle graph shows Transportation at 54° and Operations at 108°. What percentage of the total budget do these two categories represent combined?", "options": ["35%", "40%", "45%", "50%"], "answer": "45%", "difficulty": "Medium"},
+  {"id": 3, "skill": "Circle Graph", "question": "A circle graph displays three sectors with central angles in the ratio 2 : 3 : 7. What is the measure of the largest central angle?", "options": ["140°", "180°", "210°", "240°"], "answer": "210°", "difficulty": "Hard"},
+  {"id": 4, "skill": "Circle Graph", "question": "In a university survey, 280 students prefer Engineering, representing a sector angle of 84°. How many total students participated in the survey?", "options": ["1,000", "1,200", "1,400", "1,600"], "answer": "1,200", "difficulty": "Medium"},
+  {"id": 5, "skill": "Circle Graph", "question": "If a city's waste management pie chart allocates 30% to Recycling, 45% to Landfill, and the rest to Composting, what central angle represents Composting?", "options": ["72°", "90°", "108°", "126°"], "answer": "90°", "difficulty": "Medium"},
+  {"id": 6, "skill": "Circle Graph", "question": "A hospital budget circle graph allocates $450,000 to Research out of a $1.8 Million total budget. What is the central angle for Research?", "options": ["75°", "90°", "105°", "120°"], "answer": "90°", "difficulty": "Medium"},
+  {"id": 7, "skill": "Circle Graph", "question": "A circle graph sector for IT Infrastructure has a central angle of 50.4°. What fraction of the total budget in lowest terms does this represent?", "options": ["7/50", "9/50", "3/20", "7/25"], "answer": "7/50", "difficulty": "Hard"},
+  {"id": 8, "skill": "Circle Graph", "question": "Two sectors in a pie chart have central angles of (3x + 15)° and (5x - 5)°. If their combined angle equals 130°, find the value of x.", "options": ["12", "15", "18", "20"], "answer": "15", "difficulty": "Hard"},
+  {"id": 9, "skill": "Circle Graph", "question": "In a demographic circle graph, 15% are seniors, 35% are adults, and 50% are youth. What is the ratio of the central angle of adults to seniors?", "options": ["3:7", "7:3", "5:3", "7:5"], "answer": "7:3", "difficulty": "Medium"},
+  {"id": 10, "skill": "Circle Graph", "question": "If the radius of a circle graph is 10 cm and a sector has an angle of 72°, what is the area of that sector in terms of π?", "options": ["10π cm²", "20π cm²", "36π cm²", "72π cm²"], "answer": "20π cm²", "difficulty": "Hard"},
+
+  {"id": 11, "skill": "Median", "question": "Find the median of the dataset: 14, 28, 9, 35, 21, 42, 18.", "options": ["18", "21", "24.5", "28"], "answer": "21", "difficulty": "Medium"},
+  {"id": 12, "skill": "Median", "question": "The ordered test scores {68, 72, 81, x, 90, 94} have a median of 84. What is the value of x?", "options": ["84", "86", "87", "88"], "answer": "87", "difficulty": "Medium"},
+  {"id": 13, "skill": "Median", "question": "Find the median of the frequency distribution: Score 10 (freq 3), Score 20 (freq 5), Score 30 (freq 4), Score 40 (freq 2).", "options": ["20", "25", "30", "35"], "answer": "20", "difficulty": "Hard"},
+  {"id": 14, "skill": "Median", "question": "A dataset contains 12 values: 5, 8, 12, 15, 18, 22, 27, 30, 35, 40, 48, 52. If two new extreme values, 3 and 60, are added, what is the new median?", "options": ["22", "24.5", "25", "27"], "answer": "24.5", "difficulty": "Medium"},
+  {"id": 15, "skill": "Median", "question": "What is the median of the first 10 prime numbers (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)?", "options": ["11", "12", "13", "14"], "answer": "12", "difficulty": "Medium"},
+  {"id": 16, "skill": "Median", "question": "The mean of five distinct numbers is 20 and their median is 18. If the three smallest numbers are 10, 15, and 18, what is the maximum possible value for the largest number?", "options": ["37", "38", "39", "40"], "answer": "38", "difficulty": "Hard"},
+  {"id": 17, "skill": "Median", "question": "Find the median of the dataset: -12, -5, 0, 4, -8, 15, 9, -2.", "options": ["-1", "-2", "0", "2"], "answer": "-1", "difficulty": "Medium"},
+  {"id": 18, "skill": "Median", "question": "In a sample of 25 observations, the median is 45. If every value in the sample is multiplied by 3 and then increased by 7, what is the new median?", "options": ["135", "142", "145", "150"], "answer": "142", "difficulty": "Hard"},
+  {"id": 19, "skill": "Median", "question": "Find the median of the fractions: 1/2, 2/3, 3/8, 5/6, 7/12.", "options": ["1/2", "7/12", "2/3", "3/8"], "answer": "7/12", "difficulty": "Hard"},
+  {"id": 20, "skill": "Median", "question": "Find the median of: 105, 98, 120, 112, 99, 115, 108, 101.", "options": ["103", "105", "106.5", "108"], "answer": "103", "difficulty": "Medium"},
+
+  {"id": 21, "skill": "Equivalent Fractions", "question": "Find the value of x that makes the fractions equivalent: (3x - 1) / 8 = 7 / 4.", "options": ["3", "4", "5", "6"], "answer": "5", "difficulty": "Medium"},
+  {"id": 22, "skill": "Equivalent Fractions", "question": "Which algebraic fraction is equivalent to (x² - 9) / (x² + 5x + 6) for x ≠ -3, -2?", "options": ["(x + 3) / (x + 2)", "(x - 3) / (x + 2)", "(x - 3) / (x - 2)", "x / (x + 6)"], "answer": "(x - 3) / (x + 2)", "difficulty": "Hard"},
+  {"id": 23, "skill": "Equivalent Fractions", "question": "If 12 / (n + 3) is equivalent to 36 / 45, what is the value of n?", "options": ["9", "12", "15", "18"], "answer": "12", "difficulty": "Medium"},
+  {"id": 24, "skill": "Equivalent Fractions", "question": "Which fraction is equivalent to 8/18 with a denominator of 45?", "options": ["16/45", "18/45", "20/45", "24/45"], "answer": "20/45", "difficulty": "Medium"},
+  {"id": 25, "skill": "Equivalent Fractions", "question": "Simplify the complex fraction: (3/4 + 1/2) / (5/6 - 1/3) to its lowest terms.", "options": ["2/3", "5/2", "3/2", "7/4"], "answer": "5/2", "difficulty": "Hard"},
+  {"id": 26, "skill": "Equivalent Fractions", "question": "If a/b = 4/7, which expression is equivalent to (2a + b) / (3b - a)?", "options": ["15/17", "12/19", "15/19", "11/17"], "answer": "15/17", "difficulty": "Hard"},
+  {"id": 27, "skill": "Equivalent Fractions", "question": "Express 0.375 as a fraction in simplest equivalent form.", "options": ["3/8", "3/5", "7/16", "5/12"], "answer": "3/8", "difficulty": "Medium"},
+  {"id": 28, "skill": "Equivalent Fractions", "question": "Which of the following fraction pairs are NOT equivalent?", "options": ["4/10 and 10/25", "6/9 and 14/21", "8/12 and 18/24", "15/20 and 27/36"], "answer": "8/12 and 18/24", "difficulty": "Medium"},
+  {"id": 29, "skill": "Equivalent Fractions", "question": "Simplify to simplest form: (24x³y²) / (36x y⁵) for x, y ≠ 0.", "options": ["(2x²) / (3y³)", "(3x²) / (2y³)", "(2x) / (3y²)", "(4x²) / (9y³)"], "answer": "(2x²) / (3y³)", "difficulty": "Hard"},
+  {"id": 30, "skill": "Equivalent Fractions", "question": "Convert the recurring decimal 0.444... into its simplest equivalent fraction.", "options": ["2/5", "4/9", "4/10", "44/99"], "answer": "4/9", "difficulty": "Medium"},
+
+  {"id": 31, "skill": "Finding Percents", "question": "A laptop's original price of $850 is discounted by 18%. After adding an 8% sales tax on the discounted price, what is the final cost?", "options": ["$732.40", "$752.76", "$765.00", "$798.20"], "answer": "$752.76", "difficulty": "Medium"},
+  {"id": 32, "skill": "Finding Percents", "question": "In a mixture of 80 liters of alcohol and water, alcohol constitutes 25%. How many liters of pure alcohol must be added so that the resulting mixture contains 40% alcohol?", "options": ["15 Liters", "20 Liters", "25 Liters", "30 Liters"], "answer": "20 Liters", "difficulty": "Hard"},
+  {"id": 33, "skill": "Finding Percents", "question": "If a town's population increases by 10% in Year 1 and then decreases by 10% in Year 2, what is the net overall percentage change from the initial population?", "options": ["0% change", "1% decrease", "2% decrease", "1% increase"], "answer": "1% decrease", "difficulty": "Medium"},
+  {"id": 34, "skill": "Finding Percents", "question": "A investment of $5,000 earns compound interest at an annual rate of 6% compounded annually. What is the value after 2 years?", "options": ["$5,600.00", "$5,618.00", "$5,630.00", "$5,700.00"], "answer": "$5,618.00", "difficulty": "Hard"},
+  {"id": 35, "skill": "Finding Percents", "question": "What percentage of 250 is 45?", "options": ["15%", "18%", "20%", "22.5%"], "answer": "18%", "difficulty": "Medium"},
+  {"id": 36, "skill": "Finding Percents", "question": "If 35% of a number is 140, what is 65% of the same number?", "options": ["240", "260", "280", "300"], "answer": "260", "difficulty": "Medium"},
+  {"id": 37, "skill": "Finding Percents", "question": "A merchant buys a item for $120 and sells it for $168. What is the profit margin percentage based on the cost price?", "options": ["30%", "35%", "40%", "45%"], "answer": "40%", "difficulty": "Medium"},
+  {"id": 38, "skill": "Finding Percents", "question": "A student scored 78 out of 120 in Section A and 85 out of 100 in Section B. What is the student's overall weighted percentage across both sections?", "options": ["72.5%", "74.1%", "75.0%", "76.5%"], "answer": "74.1%", "difficulty": "Hard"},
+  {"id": 39, "skill": "Finding Percents", "question": "If the length of a rectangle is increased by 20% and its width is decreased by 15%, what is the percentage change in area?", "options": ["2% increase", "4% increase", "5% increase", "3% decrease"], "answer": "2% increase", "difficulty": "Hard"},
+  {"id": 40, "skill": "Finding Percents", "question": "An employee received a 15% raise, bringing their new monthly salary to $4,600. What was their original salary before the raise?", "options": ["$3,900", "$4,000", "$4,100", "$4,200"], "answer": "$4,000", "difficulty": "Medium"},
+
+  {"id": 41, "skill": "Reading a Ruler", "question": "On an architectural blueprint with scale 1/4 inch = 1 foot, a room wall measures 3.75 inches on the ruler. What is the actual length of the wall in feet?", "options": ["12 feet", "15 feet", "16.5 feet", "18 feet"], "answer": "15 feet", "difficulty": "Medium"},
+  {"id": 42, "skill": "Reading a Ruler", "question": "A precision ruler has divisions marked in 1/16ths of an inch. What is the sum of 2 and 3/8 inches and 1 and 9/16 inches expressed as a mixed number in simplest form?", "options": ["3 3/4 inches", "3 7/8 inches", "3 15/16 inches", "4 1/16 inches"], "answer": "3 15/16 inches", "difficulty": "Hard"},
+  {"id": 43, "skill": "Reading a Ruler", "question": "A steel beam expands by 1/32 inch for every 10°F rise in temperature. If measured at 68°F as 8 and 5/8 inches, what is its length at 118°F?", "options": ["8 11/16 inches", "8 3/4 inches", "8 25/32 inches", "8 13/16 inches"], "answer": "8 25/32 inches", "difficulty": "Hard"},
+  {"id": 44, "skill": "Reading a Ruler", "question": "If a ruler measurement reads 5 and 7/16 inches, what is this measurement expressed as a decimal to 4 decimal places?", "options": ["5.4250", "5.4375", "5.4500", "5.4625"], "answer": "5.4375", "difficulty": "Medium"},
+  {"id": 45, "skill": "Reading a Ruler", "question": "A rod measuring 9 and 1/4 inches is cut into 3 equal pieces. How long is each piece?", "options": ["3 1/12 inches", "3 1/8 inches", "3 1/6 inches", "3 1/4 inches"], "answer": "3 1/12 inches", "difficulty": "Hard"},
+  {"id": 46, "skill": "Reading a Ruler", "question": "Subtract 3 and 11/16 inches from 7 and 1/4 inches. Express the result in simplest fractional form.", "options": ["3 7/16 inches", "3 9/16 inches", "3 5/8 inches", "3 11/16 inches"], "answer": "3 9/16 inches", "difficulty": "Medium"},
+  {"id": 47, "skill": "Reading a Ruler", "question": "Convert a measurement of 18.625 inches into a mixed fraction with a denominator of 8.", "options": ["18 3/8 inches", "18 5/8 inches", "18 1/2 inches", "18 7/8 inches"], "answer": "18 5/8 inches", "difficulty": "Medium"},
+  {"id": 48, "skill": "Reading a Ruler", "question": "A machinist requires a gap of 0.03125 inches. Which fractional ruler division does this correspond to?", "options": ["1/16 inch", "1/32 inch", "1/64 inch", "3/32 inch"], "answer": "1/32 inch", "difficulty": "Hard"},
+  {"id": 49, "skill": "Reading a Ruler", "question": "What is the midpoint between 4 and 3/8 inches and 6 and 1/4 inches on a ruler?", "options": ["5 1/8 inches", "5 5/16 inches", "5 3/8 inches", "5 7/16 inches"], "answer": "5 5/16 inches", "difficulty": "Hard"},
+  {"id": 50, "skill": "Reading a Ruler", "question": "How many 5/8 inch segments can be cut from a wooden board measuring 15 inches long?", "options": ["20 segments", "22 segments", "24 segments", "25 segments"], "answer": "24 segments", "difficulty": "Medium"},
+
+  {"id": 51, "skill": "Proportion", "question": "A map scale indicates that 3 centimeters represents 75 kilometers. If two cities are 11.2 centimeters apart on the map, what is the actual distance between them?", "options": ["250 km", "270 km", "280 km", "300 km"], "answer": "280 km", "difficulty": "Medium"},
+  {"id": 52, "skill": "Proportion", "question": "Five industrial pumps working at a constant rate can drain a reservoir in 12 hours. How many hours would it take 8 identical pumps to drain the same reservoir?", "options": ["6.5 hours", "7.5 hours", "8.0 hours", "9.6 hours"], "answer": "7.5 hours", "difficulty": "Hard"},
+  {"id": 53, "skill": "Proportion", "question": "If 6 construction workers can lay 120 meters of road in 4 days, how many meters of road can 9 workers lay in 6 days at the same rate?", "options": ["240 meters", "270 meters", "300 meters", "360 meters"], "answer": "270 meters", "difficulty": "Hard"},
+  {"id": 54, "skill": "Proportion", "question": "Solve the proportion for x: (2x + 3) / 5 = (x + 8) / 3.", "options": ["25", "28", "31", "35"], "answer": "31", "difficulty": "Medium"},
+  {"id": 55, "skill": "Proportion", "question": "A recipe for 6 servings requires 2.25 cups of flour. How many cups of flour are needed to make 14 servings?", "options": ["4.75 cups", "5.25 cups", "5.50 cups", "6.00 cups"], "answer": "5.25 cups", "difficulty": "Medium"},
+  {"id": 56, "skill": "Proportion", "question": "If a 6-foot tall person casts a 4.5-foot shadow, how tall is a flagpole that casts a 24-foot shadow at the same time?", "options": ["28 feet", "30 feet", "32 feet", "36 feet"], "answer": "32 feet", "difficulty": "Medium"},
+  {"id": 57, "skill": "Proportion", "question": "An gears system has a drive gear with 18 teeth driving a driven gear with 45 teeth. If the drive gear rotates at 1,200 RPM, what is the speed of the driven gear?", "options": ["480 RPM", "540 RPM", "600 RPM", "720 RPM"], "answer": "480 RPM", "difficulty": "Hard"},
+  {"id": 58, "skill": "Proportion", "question": "Divide $1,400 among A, B, and C in the proportion 2 : 3 : 5. How much does C receive?", "options": ["$420", "$560", "$700", "$840"], "answer": "$700", "difficulty": "Medium"},
+  {"id": 59, "skill": "Proportion", "question": "If 15 men complete a job in 8 days, how many additional men are needed to complete the job in 5 days?", "options": ["7 men", "9 men", "12 men", "15 men"], "answer": "9 men", "difficulty": "Hard"},
+  {"id": 60, "skill": "Proportion", "question": "A vehicle uses 4.5 gallons of fuel to travel 135 miles. How many gallons will it consume on a 315-mile trip?", "options": ["9.5 gallons", "10.0 gallons", "10.5 gallons", "11.2 gallons"], "answer": "10.5 gallons", "difficulty": "Medium"},
+
+  {"id": 61, "skill": "Quadratic Formula", "question": "Solve for x using the quadratic formula: 2x² - 7x + 3 = 0.", "options": ["x = 3 or x = 1/2", "x = -3 or x = -1/2", "x = 2 or x = 3/4", "x = 1 or x = 3"], "answer": "x = 3 or x = 1/2", "difficulty": "Medium"},
+  {"id": 62, "skill": "Quadratic Formula", "question": "Find the discriminant of 3x² - 5x + 4 = 0 and determine the nature of its roots.", "options": ["73 (Two distinct real roots)", "0 (One real repeated root)", "-23 (Two complex conjugate roots)", "-47 (No solutions)"], "answer": "-23 (Two complex conjugate roots)", "difficulty": "Hard"},
+  {"id": 63, "skill": "Quadratic Formula", "question": "Solve for x: x² - 6x + 13 = 0 using the quadratic formula.", "options": ["x = 3 ± 2i", "x = -3 ± 2i", "x = 6 ± 4i", "x = 3 ± 4i"], "answer": "x = 3 ± 2i", "difficulty": "Hard"},
+  {"id": 64, "skill": "Quadratic Formula", "question": "Solve for x: 4x² - 12x + 9 = 0 using the quadratic formula.", "options": ["x = 3/2 (repeated)", "x = 2/3 (repeated)", "x = ± 3/2", "x = 3 or x = 1/4"], "answer": "x = 3/2 (repeated)", "difficulty": "Medium"},
+  {"id": 65, "skill": "Quadratic Formula", "question": "The height h(t) in feet of a projectile after t seconds is modeled by h(t) = -16t² + 64t + 80. At what time t does the projectile hit the ground (h = 0)?", "options": ["4 seconds", "5 seconds", "6 seconds", "8 seconds"], "answer": "5 seconds", "difficulty": "Hard"},
+  {"id": 66, "skill": "Quadratic Formula", "question": "For what value of k will the equation x² - kx + 16 = 0 have exactly one real solution?", "options": ["k = 4 only", "k = 8 only", "k = ± 8", "k = ± 16"], "answer": "k = ± 8", "difficulty": "Medium"},
+  {"id": 67, "skill": "Quadratic Formula", "question": "Solve for x: 5x² - 8x - 4 = 0.", "options": ["x = 2 or x = -2/5", "x = -2 or x = 2/5", "x = 4 or x = -1/5", "x = 1 or x = -4/5"], "answer": "x = 2 or x = -2/5", "difficulty": "Medium"},
+  {"id": 68, "skill": "Quadratic Formula", "question": "Find the sum of the roots of the quadratic equation 3x² + 15x - 7 = 0.", "options": ["-5", "5", "-7/3", "7/3"], "answer": "-5", "difficulty": "Hard"},
+  {"id": 69, "skill": "Quadratic Formula", "question": "Find the product of the roots of the quadratic equation 2x² - 4x - 9 = 0.", "options": ["-4.5", "4.5", "-2", "2"], "answer": "-4.5", "difficulty": "Hard"},
+  {"id": 70, "skill": "Quadratic Formula", "question": "Solve for x: x² - 4x - 1 = 0.", "options": ["x = 2 ± √5", "x = -2 ± √5", "x = 4 ± √5", "x = 2 ± √3"], "answer": "x = 2 ± √5", "difficulty": "Medium"},
+
+  {"id": 71, "skill": "Multiplication Whole Numbers", "question": "A wholesale distributor packages 145 crates of electronics, with each crate containing 36 individual units. How many total units are packaged?", "options": ["4,890 units", "5,120 units", "5,220 units", "5,440 units"], "answer": "5,220 units", "difficulty": "Medium"},
+  {"id": 72, "skill": "Multiplication Whole Numbers", "question": "Evaluate: 425 × 380 - 425 × 180 using the distributive property.", "options": ["75,000", "85,000", "95,000", "105,000"], "answer": "85,000", "difficulty": "Hard"},
+  {"id": 73, "skill": "Multiplication Whole Numbers", "question": "An auditorium has 48 rows of seats, with 32 seats in each row. If tickets sell for $25 each, what is the maximum total revenue from a sold-out show?", "options": ["$34,200", "$36,800", "$38,400", "$40,000"], "answer": "$38,400", "difficulty": "Hard"},
+  {"id": 74, "skill": "Multiplication Whole Numbers", "question": "What is the product of the first 4 power-of-two integers (2¹ × 2² × 2³ × 2⁴)?", "options": ["512", "1,024", "2,048", "4,096"], "answer": "1,024", "difficulty": "Medium"},
+  {"id": 75, "skill": "Multiplication Whole Numbers", "question": "Calculate: 784 × 256.", "options": ["198,704", "200,704", "202,604", "204,804"], "answer": "200,704", "difficulty": "Medium"},
+  {"id": 76, "skill": "Multiplication Whole Numbers", "question": "If a factory produces 1,250 solar panels per day, how many panels will it produce in a 365-day year?", "options": ["446,250", "456,250", "466,250", "476,250"], "answer": "456,250", "difficulty": "Hard"},
+  {"id": 77, "skill": "Multiplication Whole Numbers", "question": "Find the missing digit 'd' in the multiplication statement: 4d5 × 12 = 5,460.", "options": ["3", "4", "5", "6"], "answer": "5", "difficulty": "Hard"},
+  {"id": 78, "skill": "Multiplication Whole Numbers", "question": "A cargo ship carries 240 containers. Each container holds 85 boxes, and each box contains 12 items. What is the grand total number of items?", "options": ["224,400", "238,600", "244,800", "252,000"], "answer": "244,800", "difficulty": "Hard"},
+  {"id": 79, "skill": "Multiplication Whole Numbers", "question": "Evaluate: 999 × 875 using mental math shortcuts.", "options": ["873,125", "874,125", "875,125", "876,125"], "answer": "874,125", "difficulty": "Medium"},
+  {"id": 80, "skill": "Multiplication Whole Numbers", "question": "What is 15 × 16 × 25?", "options": ["5,400", "6,000", "6,250", "6,600"], "answer": "6,000", "difficulty": "Medium"},
+
+  {"id": 81, "skill": "Computation with Real Numbers", "question": "Evaluate the expression: (-4)² - 3 × (-5) + √144 / (-2).", "options": ["19", "25", "31", "37"], "answer": "25", "difficulty": "Medium"},
+  {"id": 82, "skill": "Computation with Real Numbers", "question": "Simplify: | -18 + 6 | × (-3)³ / (-9) - (-5).", "options": ["31", "36", "41", "46"], "answer": "41", "difficulty": "Hard"},
+  {"id": 83, "skill": "Computation with Real Numbers", "question": "Evaluate: (2/3)⁻² + (3/4) × 16 - ∛(-27).", "options": ["9.75", "10.50", "17.25", "12.00"], "answer": "17.25", "difficulty": "Hard"},
+  {"id": 84, "skill": "Computation with Real Numbers", "question": "Simplify: √(72) + √(50) - √(18).", "options": ["8√2", "9√2", "10√2", "11√2"], "answer": "8√2", "difficulty": "Medium"},
+  {"id": 85, "skill": "Computation with Real Numbers", "question": "Evaluate: 5.4 × 10⁴ - 2.8 × 10³ expressed in standard scientific notation.", "options": ["2.6 × 10⁴", "5.12 × 10⁴", "5.12 × 10³", "5.372 × 10⁴"], "answer": "5.12 × 10⁴", "difficulty": "Medium"},
+  {"id": 86, "skill": "Computation with Real Numbers", "question": "Calculate: (-2.5) × 4.2 ÷ (-0.5) - 3.8.", "options": ["17.2", "18.5", "19.8", "21.0"], "answer": "17.2", "difficulty": "Hard"},
+  {"id": 87, "skill": "Computation with Real Numbers", "question": "Find the value of 16^(3/4) × 27^(-2/3).", "options": ["4/9", "8/9", "9/8", "16/9"], "answer": "8/9", "difficulty": "Hard"},
+  {"id": 88, "skill": "Computation with Real Numbers", "question": "Simplify: 4 - 2 × [ 3 - 2 × ( 5 - 8 ) ].", "options": ["-14", "-10", "-6", "2"], "answer": "-14", "difficulty": "Medium"},
+  {"id": 89, "skill": "Computation with Real Numbers", "question": "Rationalize the denominator of: 6 / (√5 - √2).", "options": ["2(√5 + √2)", "3(√5 + √2)", "6(√5 + √2)", "2(√5 - √2)"], "answer": "2(√5 + √2)", "difficulty": "Hard"},
+  {"id": 90, "skill": "Computation with Real Numbers", "question": "Evaluate log₂ (64) + log₃ (81) - log₅ (125).", "options": ["5", "7", "9", "11"], "answer": "7", "difficulty": "Medium"},
+
+  {"id": 91, "skill": "Systems of Linear Equations", "question": "Solve the system of equations for (x, y): 3x + 2y = 16 and 5x - 2y = 8.", "options": ["(3, 3.5)", "(2, 5)", "(4, 2)", "(1, 6.5)"], "answer": "(3, 3.5)", "difficulty": "Medium"},
+  {"id": 92, "skill": "Systems of Linear Equations", "question": "A theater sells adult tickets for $12 and child tickets for $7. If a total of 150 tickets were sold for $1,450 revenue, how many adult tickets were sold?", "options": ["70 tickets", "75 tickets", "80 tickets", "85 tickets"], "answer": "80 tickets", "difficulty": "Hard"},
+  {"id": 93, "skill": "Systems of Linear Equations", "question": "Determine the value of k for which the system of equations has infinitely many solutions: 2x - 3y = 7 and 6x - ky = 21.", "options": ["k = 6", "k = 8", "k = 9", "k = 12"], "answer": "k = 9", "difficulty": "Hard"},
+  {"id": 94, "skill": "Systems of Linear Equations", "question": "Solve the system of equations for (x, y): 4x + 3y = 25 and x - 2y = -2.", "options": ["(4, 3)", "(3, 4)", "(5, 2)", "(7, 1)"], "answer": "(4, 3)", "difficulty": "Medium"},
+  {"id": 95, "skill": "Systems of Linear Equations", "question": "If 2x + y = 11 and 3x + 4y = 24, find the value of (x + y).", "options": ["6", "7", "8", "9"], "answer": "7", "difficulty": "Medium"},
+  {"id": 96, "skill": "Systems of Linear Equations", "question": "A boat travels 24 miles downstream in 2 hours and returns upstream in 4 hours. What is the speed of the current?", "options": ["2 mph", "3 mph", "4 mph", "5 mph"], "answer": "3 mph", "difficulty": "Hard"},
+  {"id": 97, "skill": "Systems of Linear Equations", "question": "For what value of m will the system of equations have NO solution (parallel lines): 4x + 6y = 12 and mx + 9y = 15?", "options": ["m = 4.5", "m = 6.0", "m = 7.5", "m = 9.0"], "answer": "m = 6.0", "difficulty": "Hard"},
+  {"id": 98, "skill": "Systems of Linear Equations", "question": "Solve for x in the 3-variable system: x + y + z = 6, 2x - y + z = 3, and x + 2y - z = 2.", "options": ["x = 1", "x = 2", "x = 3", "x = 4"], "answer": "x = 1", "difficulty": "Hard"},
+  {"id": 99, "skill": "Systems of Linear Equations", "question": "The perimeter of a rectangle is 44 cm. If the length is 4 cm less than twice the width, find the length.", "options": ["12 cm", "14.67 cm", "13.33 cm", "16 cm"], "answer": "13.33 cm", "difficulty": "Medium"},
+  {"id": 100, "skill": "Systems of Linear Equations", "question": "Solve the system: 7x - 5y = 4 and 3x + 2y = 19. Find y.", "options": ["y = 2", "y = 3", "y = 4", "y = 5"], "answer": "y = 4", "difficulty": "Medium"},
+
+  {"id": 101, "skill": "Pythagorean Theorem", "question": "A right triangle has legs of length 9 cm and 12 cm. What is the length of the hypotenuse?", "options": ["13 cm", "14 cm", "15 cm", "17 cm"], "answer": "15 cm", "difficulty": "Medium"},
+  {"id": 102, "skill": "Pythagorean Theorem", "question": "The hypotenuse of a right-angled triangle is 25 meters, and one leg is 7 meters. What is the length of the other leg?", "options": ["20 meters", "24 meters", "22 meters", "23 meters"], "answer": "24 meters", "difficulty": "Medium"},
+  {"id": 103, "skill": "Pythagorean Theorem", "question": "A 13-foot ladder leans against a vertical wall. If the base of the ladder is 5 feet away from the wall, how high up the wall does the ladder reach?", "options": ["10 feet", "11 feet", "12 feet", "12.5 feet"], "answer": "12 feet", "difficulty": "Medium"},
+  {"id": 104, "skill": "Pythagorean Theorem", "question": "Find the distance between the two points A(2, 3) and B(8, 11) in the coordinate plane.", "options": ["8 units", "10 units", "12 units", "14 units"], "answer": "10 units", "difficulty": "Hard"},
+  {"id": 105, "skill": "Pythagorean Theorem", "question": "An isosceles triangle has equal sides of length 10 cm and a base of length 12 cm. Find the area of the triangle.", "options": ["40 cm²", "48 cm²", "54 cm²", "60 cm²"], "answer": "48 cm²", "difficulty": "Hard"},
+  {"id": 106, "skill": "Pythagorean Theorem", "question": "The diagonal of a square room measures 14 meters. What is the length of each side of the room to 2 decimal places?", "options": ["9.90 meters", "10.20 meters", "9.50 meters", "11.00 meters"], "answer": "9.90 meters", "difficulty": "Medium"},
+  {"id": 107, "skill": "Pythagorean Theorem", "question": "A hiker walks 6 km due North, then 8 km due East, and finally 12 km due North. What is the straight-line displacement from the starting point?", "options": ["18.2 km", "19.7 km", "20.0 km", "21.5 km"], "answer": "19.7 km", "difficulty": "Hard"},
+  {"id": 108, "skill": "Pythagorean Theorem", "question": "In a 3D rectangular box with dimensions 3 cm × 4 cm × 12 cm, what is the length of the space diagonal?", "options": ["13 cm", "14 cm", "15 cm", "16 cm"], "answer": "13 cm", "difficulty": "Hard"},
+  {"id": 109, "skill": "Pythagorean Theorem", "question": "A right triangle has legs x and (x + 2), and a hypotenuse of 10. Find x.", "options": ["x = 5", "x = 6", "x = 7", "x = 8"], "answer": "x = 6", "difficulty": "Medium"},
+  {"id": 110, "skill": "Pythagorean Theorem", "question": "What is the area of a right triangle whose hypotenuse is 17 cm and one leg is 15 cm?", "options": ["50 cm²", "60 cm²", "70 cm²", "80 cm²"], "answer": "60 cm²", "difficulty": "Medium"},
+
+  {"id": 111, "skill": "Probability and Statistics", "question": "A fair deck of 52 playing cards is shuffled. What is the probability of drawing a red King or a Black Ace?", "options": ["1/13", "2/13", "1/26", "4/13"], "answer": "1/13", "difficulty": "Medium"},
+  {"id": 112, "skill": "Probability and Statistics", "question": "Two fair six-sided dice are rolled simultaneously. What is the probability that the sum of the numbers showing is equal to 8?", "options": ["1/6", "5/36", "1/9", "7/36"], "answer": "5/36", "difficulty": "Hard"},
+  {"id": 113, "skill": "Probability and Statistics", "question": "A bag contains 5 red balls, 3 blue balls, and 2 green balls. If two balls are drawn at random without replacement, what is the probability that both are red?", "options": ["2/9", "5/18", "1/4", "3/10"], "answer": "2/9", "difficulty": "Hard"},
+  {"id": 114, "skill": "Probability and Statistics", "question": "If a coin is flipped 4 times, what is the probability of getting exactly 3 heads?", "options": ["1/4", "3/8", "1/2", "5/16"], "answer": "1/4", "difficulty": "Medium"},
+  {"id": 115, "skill": "Probability and Statistics", "question": "What is the mean of the data set: 12, 18, 25, 31, 44?", "options": ["24", "26", "28", "30"], "answer": "26", "difficulty": "Medium"},
+  {"id": 116, "skill": "Probability and Statistics", "question": "Find the range of the test scores: 55, 89, 72, 98, 64, 81.", "options": ["41", "43", "45", "47"], "answer": "43", "difficulty": "Medium"},
+  {"id": 117, "skill": "Probability and Statistics", "question": "In a factory, Machine A produces 60% of output with 2% defect rate, and Machine B produces 40% with 3% defect rate. What is the overall probability that a randomly chosen item is defective?", "options": ["2.4%", "2.5%", "2.6%", "2.8%"], "answer": "2.4%", "difficulty": "Hard"},
+  {"id": 118, "skill": "Probability and Statistics", "question": "Find the mode of the dataset: 7, 12, 8, 12, 15, 7, 12, 9.", "options": ["7", "8", "12", "15"], "answer": "12", "difficulty": "Medium"},
+  {"id": 119, "skill": "Probability and Statistics", "question": "A student takes 4 exams with scores 82, 88, 91, and 85. What score must they achieve on the 5th exam to have an overall mean score of 88?", "options": ["92", "94", "96", "98"], "answer": "94", "difficulty": "Hard"},
+  {"id": 120, "skill": "Probability and Statistics", "question": "What is the probability of rolling an even number on a standard 6-sided die?", "options": ["1/3", "1/2", "2/3", "1/6"], "answer": "1/2", "difficulty": "Medium"},
+
+  {"id": 121, "skill": "Exponents and Radicals", "question": "Simplify the expression: (2x³y²)⁴ × (3x⁻²y)³.", "options": ["432 x6 y11", "216 x6 y11", "432 x8 y10", "216 x8 y10"], "answer": "432 x6 y11", "difficulty": "Hard"},
+  {"id": 122, "skill": "Exponents and Radicals", "question": "Evaluate: (27/64)^(-2/3).", "options": ["16/9", "9/16", "4/3", "3/4"], "answer": "16/9", "difficulty": "Medium"},
+  {"id": 123, "skill": "Exponents and Radicals", "question": "Simplify the radical expression: √(180x⁵y⁴) for x, y ≥ 0.", "options": ["6x²y² √(5x)", "5x²y² √(6x)", "6xy² √(5x³)", "36x²y² √(5x)"], "answer": "6x²y² √(5x)", "difficulty": "Hard"},
+  {"id": 124, "skill": "Exponents and Radicals", "question": "Solve for x: 3^(2x + 1) = 243.", "options": ["x = 1.5", "x = 2.0", "x = 2.5", "x = 3.0"], "answer": "x = 2.0", "difficulty": "Medium"},
+  {"id": 125, "skill": "Exponents and Radicals", "question": "Rationalize the denominator: 10 / (3 + √5).", "options": ["(15 - 5√5) / 2", "(15 + 5√5) / 2", "5(3 - √5)", "5(3 + √5)"], "answer": "(15 - 5√5) / 2", "difficulty": "Hard"},
+  {"id": 126, "skill": "Exponents and Radicals", "question": "Evaluate: 2⁰ + 4^(1/2) - 8^(2/3).", "options": ["-1", "0", "1", "2"], "answer": "-1", "difficulty": "Medium"},
+  {"id": 127, "skill": "Exponents and Radicals", "question": "Simplify: ∛(54) + ∛(128) - ∛(16).", "options": ["3 ∛(2)", "4 ∛(2)", "5 ∛(2)", "6 ∛(2)"], "answer": "5 ∛(2)", "difficulty": "Hard"},
+  {"id": 128, "skill": "Exponents and Radicals", "question": "Solve for n: (1/4)ⁿ⁺¹ = 64.", "options": ["n = -4", "n = -3", "n = -2", "n = 4"], "answer": "n = -4", "difficulty": "Hard"},
+  {"id": 129, "skill": "Exponents and Radicals", "question": "Express in simplest exponential form: ⁵√(x¹⁵ y¹⁰).", "options": ["x³ y²", "x⁵ y²", "x³ y⁵", "x¹⁰ y⁵"], "answer": "x³ y²", "difficulty": "Medium"},
+  {"id": 130, "skill": "Exponents and Radicals", "question": "What is 5⁻² × 5⁵?", "options": ["5", "25", "125", "625"], "answer": "125", "difficulty": "Medium"},
+
+  {"id": 131, "skill": "Perimeter and Area", "question": "A rectangle has a length of 16 cm and a diagonal of 20 cm. Find the area of the rectangle.", "options": ["160 cm²", "192 cm²", "240 cm²", "320 cm²"], "answer": "192 cm²", "difficulty": "Medium"},
+  {"id": 132, "skill": "Perimeter and Area", "question": "The circumference of a circular garden is 44 meters. Using π ≈ 22/7, what is the area of the garden?", "options": ["144 m²", "154 m²", "164 m²", "176 m²"], "answer": "154 m²", "difficulty": "Medium"},
+  {"id": 133, "skill": "Perimeter and Area", "question": "A trapezoid has parallel bases of length 14 cm and 22 cm, and an area of 180 cm². What is the height of the trapezoid?", "options": ["8 cm", "10 cm", "12 cm", "15 cm"], "answer": "10 cm", "difficulty": "Medium"},
+  {"id": 134, "skill": "Perimeter and Area", "question": "If the side of an equilateral triangle is 8 cm, what is its area in terms of √3?", "options": ["12√3 cm²", "16√3 cm²", "24√3 cm²", "32√3 cm²"], "answer": "16√3 cm²", "difficulty": "Hard"},
+  {"id": 135, "skill": "Perimeter and Area", "question": "A room measuring 12 feet by 15 feet is to be carpeted. If carpet costs $4.50 per square foot, what is the total cost?", "options": ["$710", "$750", "$810", "$900"], "answer": "$810", "difficulty": "Medium"},
+  {"id": 136, "skill": "Perimeter and Area", "question": "If the area of a square is increased by 44%, by what percentage did its side length increase?", "options": ["18%", "20%", "22%", "24%"], "answer": "20%", "difficulty": "Hard"},
+  {"id": 137, "skill": "Perimeter and Area", "question": "Find the perimeter of a regular hexagon with an area of 54√3 cm².", "options": ["30 cm", "36 cm", "42 cm", "48 cm"], "answer": "36 cm", "difficulty": "Hard"},
+  {"id": 138, "skill": "Perimeter and Area", "question": "What is the area of a sector of a circle with radius 12 cm and a central angle of 60° in terms of π?", "options": ["18π cm²", "24π cm²", "36π cm²", "48π cm²"], "answer": "24π cm²", "difficulty": "Medium"},
+  {"id": 139, "skill": "Perimeter and Area", "question": "A running track consists of two straight sections of 100 m each and two semicircular ends with radius 35 m. What is the total length of one lap (π ≈ 22/7)?", "options": ["380 m", "400 m", "420 m", "440 m"], "answer": "420 m", "difficulty": "Hard"},
+  {"id": 140, "skill": "Perimeter and Area", "question": "Find the perimeter of a right-angled triangle with legs 5 cm and 12 cm.", "options": ["25 cm", "28 cm", "30 cm", "34 cm"], "answer": "30 cm", "difficulty": "Medium"},
+
+  {"id": 141, "skill": "Linear Functions and Slope", "question": "Find the slope of the line passing through the points P(-3, 7) and Q(5, -9).", "options": ["-2", "-1/2", "2", "1/2"], "answer": "-2", "difficulty": "Medium"},
+  {"id": 142, "skill": "Linear Functions and Slope", "question": "What is the equation of the line in slope-intercept form passing through (4, -2) with a slope of 3/2?", "options": ["y = 3/2 x - 8", "y = 3/2 x - 6", "y = 3/2 x + 4", "y = 3/2 x - 4"], "answer": "y = 3/2 x - 8", "difficulty": "Medium"},
+  {"id": 143, "skill": "Linear Functions and Slope", "question": "Find the equation of the line perpendicular to 2x - 5y = 10 passing through the point (6, 1).", "options": ["y = -5/2 x + 16", "y = 5/2 x - 14", "y = -2/5 x + 3.4", "y = -5/2 x - 14"], "answer": "y = -5/2 x + 16", "difficulty": "Hard"},
+  {"id": 144, "skill": "Linear Functions and Slope", "question": "What is the x-intercept of the line 4x - 3y = 24?", "options": ["(6, 0)", "(0, -8)", "(-6, 0)", "(8, 0)"], "answer": "(6, 0)", "difficulty": "Medium"},
+  {"id": 145, "skill": "Linear Functions and Slope", "question": "Two lines L1: 3x + ky = 12 and L2: 6x - 8y = 15 are parallel. Find the value of k.", "options": ["k = -4", "k = 4", "k = -6", "k = 8"], "answer": "k = -4", "difficulty": "Hard"},
+  {"id": 146, "skill": "Linear Functions and Slope", "question": "If f(x) = -4x + 9, what is the value of f(-3)?", "options": ["-3", "12", "21", "24"], "answer": "21", "difficulty": "Medium"},
+  {"id": 147, "skill": "Linear Functions and Slope", "question": "A line has an angle of inclination of 45° with the positive x-axis and passes through (2, 5). What is its y-intercept?", "options": ["2", "3", "4", "5"], "answer": "3", "difficulty": "Medium"},
+  {"id": 148, "skill": "Linear Functions and Slope", "question": "Find the distance from the point (3, 4) to the line 3x + 4y - 5 = 0.", "options": ["3 units", "4 units", "5 units", "6 units"], "answer": "4 units", "difficulty": "Hard"},
+  {"id": 149, "skill": "Linear Functions and Slope", "question": "A taxi service charges a flat fee of $3.50 plus $2.25 per mile driven. If a fare total is $26.00, how many miles were driven?", "options": ["9 miles", "10 miles", "11 miles", "12 miles"], "answer": "10 miles", "difficulty": "Medium"},
+  {"id": 150, "skill": "Linear Functions and Slope", "question": "Convert the general equation 5x + 2y - 10 = 0 into slope-intercept form.", "options": ["y = -5/2 x + 5", "y = 5/2 x - 5", "y = -2/5 x + 5", "y = 2/5 x - 10"], "answer": "y = -5/2 x + 5", "difficulty": "Medium"},
+
+  {"id": 151, "skill": "Polynomial Operations", "question": "Expand and simplify: (3x - 4)(2x² + 5x - 1).", "options": ["6x³ + 7x² - 23x + 4", "6x³ + 7x² - 20x + 4", "6x³ - 7x² - 23x + 4", "6x³ + 15x² - 23x + 4"], "answer": "6x³ + 7x² - 23x + 4", "difficulty": "Medium"},
+  {"id": 152, "skill": "Polynomial Operations", "question": "Find the remainder when P(x) = 2x³ - 5x² + 3x + 7 is divided by (x - 2) using the Remainder Theorem.", "options": ["7", "9", "11", "13"], "answer": "9", "difficulty": "Medium"},
+  {"id": 153, "skill": "Polynomial Operations", "question": "Factor completely: 8x³ - 27.", "options": ["(2x - 3)(4x² + 6x + 9)", "(2x + 3)(4x² - 6x + 9)", "(2x - 3)(4x² - 6x + 9)", "(4x - 9)(2x² + 3)"], "answer": "(2x - 3)(4x² + 6x + 9)", "difficulty": "Hard"},
+  {"id": 154, "skill": "Polynomial Operations", "question": "If (x + 3) is a factor of x³ + kx² - 4x + 12, find the value of k.", "options": ["k = 1", "k = 2", "k = 3", "k = 4"], "answer": "k = 1", "difficulty": "Hard"},
+  {"id": 155, "skill": "Polynomial Operations", "question": "Subtract (4x² - 7x + 5) from (9x² + 2x - 3).", "options": ["5x² + 9x - 8", "5x² - 5x - 8", "5x² + 9x + 2", "13x² - 5x + 2"], "answer": "5x² + 9x - 8", "difficulty": "Medium"},
+
+  {"id": 156, "skill": "Trigonometric Ratios", "question": "In a right triangle ABC with right angle at C, if sin(A) = 3/5, what is the value of tan(A)?", "options": ["3/4", "4/5", "4/3", "5/3"], "answer": "3/4", "difficulty": "Medium"},
+  {"id": 157, "skill": "Trigonometric Ratios", "question": "Evaluate: sin²(30°) + cos²(60°) + tan(45°).", "options": ["1.25", "1.50", "1.75", "2.00"], "answer": "1.50", "difficulty": "Medium"},
+  {"id": 158, "skill": "Trigonometric Ratios", "question": "From the top of a 50-meter cliff, the angle of depression to a boat on the sea is 30°. How far is the boat from the base of the cliff?", "options": ["50√3 meters", "50 / √3 meters", "100 meters", "25√3 meters"], "answer": "50√3 meters", "difficulty": "Hard"},
+  {"id": 159, "skill": "Trigonometric Ratios", "question": "Simplify the trigonometric identity: (1 - sin²θ) / cos(θ).", "options": ["sin(θ)", "cos(θ)", "tan(θ)", "sec(θ)"], "answer": "cos(θ)", "difficulty": "Medium"},
+  {"id": 160, "skill": "Trigonometric Ratios", "question": "If sec(θ) = 13/12 in Quadrant I, find the value of csc(θ).", "options": ["13/5", "5/13", "12/5", "5/12"], "answer": "13/5", "difficulty": "Hard"},
+
+  {"id": 161, "skill": "Logarithmic Functions", "question": "Evaluate: log₂ (32) + log₃ (27) - log₁₀ (100).", "options": ["4", "5", "6", "7"], "answer": "6", "difficulty": "Medium"},
+  {"id": 162, "skill": "Logarithmic Functions", "question": "Solve for x: log(x + 3) + log(x - 3) = log(16).", "options": ["x = 4", "x = 5", "x = 6", "x = 7"], "answer": "x = 5", "difficulty": "Hard"},
+  {"id": 163, "skill": "Logarithmic Functions", "question": "Express as a single logarithm: 2 log(a) - 3 log(b) + 1/2 log(c).", "options": ["log( (a² √c) / b³ )", "log( (a² b³) / √c )", "log( (a √c) / b³ )", "log( a² / (b³ c) )"], "answer": "log( (a² √c) / b³ )", "difficulty": "Hard"},
+  {"id": 164, "skill": "Logarithmic Functions", "question": "Solve for x: 5^x = 125.", "options": ["x = 2", "x = 3", "x = 4", "x = 5"], "answer": "x = 3", "difficulty": "Medium"},
+  {"id": 165, "skill": "Logarithmic Functions", "question": "Find the value of log₅ (1/125).", "options": ["-3", "-2", "3", "1/3"], "answer": "-3", "difficulty": "Medium"},
+
+  {"id": 166, "skill": "Matrices and Determinants", "question": "Find the determinant of the 2x2 matrix [[4, 7], [2, 5]].", "options": ["6", "8", "10", "12"], "answer": "6", "difficulty": "Medium"},
+  {"id": 167, "skill": "Matrices and Determinants", "question": "For what value of k is the matrix [[k, 6], [2, 4]] singular (determinant = 0)?", "options": ["k = 2", "k = 3", "k = 4", "k = 6"], "answer": "k = 3", "difficulty": "Medium"},
+  {"id": 168, "skill": "Matrices and Determinants", "question": "If Matrix A is size 2x3 and Matrix B is size 3x4, what is the dimension of the product matrix AB?", "options": ["2x4", "3x3", "4x2", "Undefined"], "answer": "2x4", "difficulty": "Medium"},
+  {"id": 169, "skill": "Matrices and Determinants", "question": "Find the inverse of the matrix A = [[2, 1], [5, 3]].", "options": ["[[3, -1], [-5, 2]]", "[[-3, 1], [5, -2]]", "[[2, -1], [-5, 3]]", "[[3, 1], [5, 2]]"], "answer": "[[3, -1], [-5, 2]]", "difficulty": "Hard"},
+  {"id": 170, "skill": "Matrices and Determinants", "question": "Compute 3A - 2B for A = [[1, 2], [3, 4]] and B = [[0, 1], [2, 1]].", "options": ["[[3, 4], [5, 10]]", "[[3, 4], [5, 8]]", "[[3, 2], [5, 10]]", "[[3, 4], [7, 10]]"], "answer": "[[3, 4], [5, 10]]", "difficulty": "Hard"},
+
+  {"id": 171, "skill": "Coordinate Geometry and Distance", "question": "Find the midpoint of the line segment joining points A(-4, 8) and B(6, -2).", "options": ["(1, 3)", "(2, 3)", "(1, 4)", "(2, 4)"], "answer": "(1, 3)", "difficulty": "Medium"},
+  {"id": 172, "skill": "Coordinate Geometry and Distance", "question": "What is the center and radius of the circle with equation (x - 3)² + (y + 5)² = 49?", "options": ["Center (3, -5), Radius 7", "Center (-3, 5), Radius 7", "Center (3, -5), Radius 49", "Center (-3, 5), Radius 49"], "answer": "Center (3, -5), Radius 7", "difficulty": "Medium"},
+  {"id": 173, "skill": "Coordinate Geometry and Distance", "question": "Find the distance between the parallel lines 3x - 4y + 7 = 0 and 3x - 4y - 18 = 0.", "options": ["3 units", "4 units", "5 units", "6 units"], "answer": "5 units", "difficulty": "Hard"},
+  {"id": 174, "skill": "Coordinate Geometry and Distance", "question": "Find the area of a triangle with vertices at (0,0), (4,0), and (0,6).", "options": ["10 sq units", "12 sq units", "14 sq units", "16 sq units"], "answer": "12 sq units", "difficulty": "Medium"},
+  {"id": 175, "skill": "Coordinate Geometry and Distance", "question": "Find the point which divides the line segment joining (1, 2) and (6, 7) internally in the ratio 2:3.", "options": ["(3, 4)", "(4, 5)", "(3.5, 4.5)", "(2.5, 3.5)"], "answer": "(3, 4)", "difficulty": "Hard"}
 ]

@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}Completed Assessment Review - Knowledge Gap AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+
+    <!-- Header Panel -->
+    <div class="glass-panel p-4 mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <a href="{{ url_for('result') }}" class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:44px; height:44px;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div>
+                    <h3 class="font-heading fw-bold mb-0 text-white">
+                        <i class="fas fa-clipboard-check text-primary me-2"></i> Completed Assessment Review
+                    </h3>
+                    <p class="text-white-50 small mb-0">
+                        Student: <strong class="text-white">{{ result_data.student_name }}</strong> (Reg: {{ result_data.register_number }}) &bull; Score: <strong class="text-success">{{ result_data.score }} / {{ result_data.total_questions }}</strong> ({{ result_data.accuracy }}% Accuracy)
+                    </p>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light fw-bold filter-btn active px-3 py-2" onclick="filterReview('all', this)">All Questions ({{ result_data.total_questions }})</button>
+                <button class="btn btn-sm btn-outline-danger fw-bold filter-btn px-3 py-2" onclick="filterReview('wrong', this)">❌ Wrong ({{ result_data.wrong_answers }})</button>
+                <button class="btn btn-sm btn-outline-success fw-bold filter-btn px-3 py-2" onclick="filterReview('correct', this)">✅ Correct ({{ result_data.correct_answers }})</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Review Cards Grid -->
+    <div class="row g-4 mb-4">
+        {% for item in result_data.question_review %}
+        <div class="col-12 review-card-item" data-status="{% if item.is_correct %}correct{% else %}wrong{% endif %}">
+            <div class="glass-panel p-4 position-relative border-2 {% if item.is_correct %}border-success{% else %}border-danger{% endif %}">
+                
+                <!-- Card Header -->
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-2 border-bottom border-white border-opacity-10">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge {% if item.is_correct %}bg-success{% else %}bg-danger{% endif %} fs-6 px-3 py-2 fw-bold">
+                            Question #{{ item.number }}
+                        </span>
+                        <span class="badge bg-primary bg-opacity-25 text-white border border-primary border-opacity-25 px-3 py-2 fw-bold">
+                            <i class="fas fa-bookmark me-1 text-primary"></i> {{ item.skill }}
+                        </span>
+                    </div>
+
+                    <div>
+                        {% if item.is_correct %}
+                        <span class="badge bg-success bg-opacity-20 text-success border border-success px-3 py-2 fs-6 fw-bold">
+                            <i class="fas fa-check-circle me-1"></i> Correct Answer (+1)
+                        </span>
+                        {% else %}
+                        <span class="badge bg-danger bg-opacity-20 text-danger border border-danger px-3 py-2 fs-6 fw-bold">
+                            <i class="fas fa-times-circle me-1"></i> Incorrect / Unanswered
+                        </span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- High-Contrast Question Text -->
+                <h5 class="fw-bold text-white mb-4 lh-base" style="font-size:1.15rem; letter-spacing:0.2px;">
+                    {{ item.question }}
+                </h5>
+
+                <!-- Answer Comparison Boxes -->
+                <div class="row g-3">
+                    <!-- Student's Choice -->
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 border h-100 {% if item.is_correct %}bg-success bg-opacity-10 border-success text-white{% else %}bg-danger bg-opacity-15 border-danger text-white{% endif %}">
+                            <div class="text-uppercase extra-small fw-bold mb-1 {% if item.is_correct %}text-success{% else %}text-danger{% endif %}">
+                                <i class="fas fa-user-check me-1"></i> Your Answer:
+                            </div>
+                            <div class="fs-6 fw-bold d-flex align-items-center gap-2 mt-1">
+                                {% if item.is_correct %}
+                                <i class="fas fa-check-circle text-success fs-5"></i>
+                                <span class="text-white">{{ item.selected }}</span>
+                                {% else %}
+                                <i class="fas fa-times-circle text-danger fs-5"></i>
+                                <span class="text-white">{{ item.selected }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Correct Choice -->
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 border h-100 bg-success bg-opacity-10 border-success text-white">
+                            <div class="text-uppercase extra-small fw-bold text-success mb-1">
+                                <i class="fas fa-award me-1"></i> Correct Answer:
+                            </div>
+                            <div class="fs-6 fw-bold d-flex align-items-center gap-2 mt-1 text-white">
+                                <i class="fas fa-check-circle text-success fs-5"></i>
+                                <span class="text-white">{{ item.correct }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12">
+            <div class="glass-panel p-5 text-center">
+                <i class="fas fa-info-circle text-muted fs-1 mb-3"></i>
+                <h5 class="text-white fw-bold">No Review Data Available</h5>
+                <p class="text-white-50">Please complete an assessment first to review questions.</p>
+                <a href="{{ url_for('quiz') }}" class="btn btn-brand mt-2">Start Assessment</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <div class="glass-panel p-4 text-center">
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="{{ url_for('result') }}" class="btn btn-outline-light btn-lg px-4 fs-6">
+                <i class="fas fa-chart-line me-2"></i> Back to Dashboard
+            </a>
+            <a href="{{ url_for('recommendations') }}" class="btn btn-brand btn-lg px-4 fs-6">
+                <i class="fas fa-lightbulb me-2"></i> View AI Recommendations
+            </a>
+            <a href="{{ url_for('new_quiz') }}" class="btn btn-outline-brand btn-lg px-4 fs-6" style="border-width:2px;">
+                <i class="fas fa-redo me-2"></i> Retake New Assessment
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function filterReview(type, btnElement) {
+    const items = document.querySelectorAll('.review-card-item');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    filterBtns.forEach(btn => {
+        btn.classList.remove('btn-light', 'active');
+        if (!btn.classList.contains('btn-outline-danger') && !btn.classList.contains('btn-outline-success')) {
+            btn.classList.add('btn-outline-light');
+        }
+    });
+
+    if (btnElement) {
+        btnElement.classList.remove('btn-outline-light');
+        btnElement.classList.add('btn-light', 'active');
+    }
+
+    items.forEach(item => {
+        const status = item.getAttribute('data-status');
+        if (type === 'all' || status === type) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}
