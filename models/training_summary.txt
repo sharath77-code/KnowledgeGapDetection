@@ -1,0 +1,8 @@
+==================================================
+  🎉 ALL 4 ADVANCED DEEP LEARNING ARCHITECTURES TRAINED & SAVED!
+==================================================
+1. PyTorch GRU Model               : 92.25% Accuracy -> Saved as models/gru_model.pth
+2. Transformer-DKT (SAKT) Model    : 91.25% Accuracy -> Saved as models/transformer_dkt_model.pth
+3. Knowledge Autoencoder (Latent)  : MSE Loss 0.0194 -> Saved as models/autoencoder_model.pth
+4. Concept Graph GNN (Prerequisites): Loss 0.0191 -> Saved as models/gnn_model.pth
+==================================================
