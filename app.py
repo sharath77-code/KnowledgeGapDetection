@@ -1887,5 +1887,14 @@ def pdf_notes(skill):
     """
     return make_response(html)
 
+@app.route('/poster')
+def show_academic_poster():
+    poster_path = os.path.join(app.root_path, 'poster.html')
+    if not os.path.exists(poster_path):
+        poster_path = os.path.join(os.path.dirname(app.root_path), 'poster.html')
+    with open(poster_path, 'r', encoding='utf-8') as f:
+        html_code = f.read()
+    return make_response(html_code)
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
