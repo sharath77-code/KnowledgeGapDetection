@@ -178,7 +178,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* FIX GAP: Aligns items tight from the top */
+            justify-content: flex-start;
             gap: 2px;
             overflow: hidden;
         }
@@ -202,7 +202,7 @@
             font-weight: 800;
             color: #1e3a8a;
             margin-top: 1px;
-            margin-bottom: 1px; /* TIGHT GAP */
+            margin-bottom: 1px;
             font-size: 0.68vw;
         }
 
@@ -322,7 +322,7 @@
         }
 
         .footer-right {
-            text-align: left; /* ALIGNED LEFT DIRECTLY ABOVE REFERENCE 1 */
+            text-align: left;
             max-width: 60%;
         }
 
@@ -395,9 +395,7 @@
 
                         <p>Utilizing <strong>525,534 student interaction logs</strong> from ASSISTments across 20 math skills, our feature engine extracts 7 zero-label-leakage attributes (<code>log_ms_response</code>, <code>hint_ratio</code>, <code>attempt_hint_sum</code>, etc.).</p>
 
-                        <p>Our top model (XGBoost Classifier) achieves <strong>92.40% Accuracy & 0.9865 Macro ROC-AUC</strong>, while PyTorch GRU DKT achieves <strong>92.25% Accuracy & 0.9780 ROC-AUC</strong>.</p>
-
-                        <p>A 20-node Graph Neural Network (GCN) models prerequisite dependencies (0.0191 Loss), while a 4D Autoencoder compresses interaction friction into interpretable metrics (0.0194 MSE Loss).</p>
+                        <p>Our top model (XGBoost Classifier) achieves <strong>91.56% Accuracy & 0.9880 ROC-AUC</strong>, while PyTorch LSTM DKT achieves <strong>85.77% Accuracy</strong>.</p>
                     </div>
                 </div>
 
@@ -411,11 +409,11 @@
                         <div class="bold-heading">Key Project Objectives:</div>
                         <ul>
                             <li><strong>1. Feature Engine:</strong> 7 zero-label-leakage interaction attributes capturing latency and hint reliance.</li>
-                            <li><strong>2. Dual AI Pipeline:</strong> Tabular ML (XGBoost 92.40%) & Sequential DKT (PyTorch GRU 92.25%, Transformer-DKT 91.25%).</li>
-                            <li><strong>3. Concept GCN Graph:</strong> 20-Node Graph Convolutional Network mapping prerequisite dependencies (0.0191 Loss).</li>
-                            <li><strong>4. 4D Autoencoder:</strong> Latent space friction compression into mastery, hesitation, and help metrics (0.0194 MSE).</li>
-                            <li><strong>5. Multi-Class Explainability:</strong> Validated via One-vs-Rest ROC-AUC curves (0.9865 AUC) & Seaborn confusion matrices.</li>
-                            <li><strong>6. Dedicated /review Portal:</strong> Interactive side-by-side comparison cards (Your Answer vs Correct Answer).</li>
+                            <li><strong>2. Machine Learning Benchmark:</strong> Decision Tree (81.56%), Random Forest (82.77%), XGBoost (91.56% Acc, 0.9880 AUC).</li>
+                            <li><strong>3. Deep Learning Benchmark:</strong> 1D-CNN (84.97%), Simple RNN (85.47%), LSTM / DKT (85.77% Acc).</li>
+                            <li><strong>4. Multi-Class Explainability:</strong> Validated via One-vs-Rest ROC-AUC curves (0.9880 AUC) & Seaborn confusion matrices.</li>
+                            <li><strong>5. Dedicated /review Portal:</strong> Interactive side-by-side comparison cards (Your Answer vs Correct Answer).</li>
+                            <li><strong>6. Session Remediation:</strong> Attended-topic recommendations (10 topics) with single-click print-ready A4 PDF study guides.</li>
                         </ul>
                     </div>
                 </div>
@@ -451,62 +449,52 @@
                 <div class="poster-card">
                     <div class="card-header">4. RESULTS & MODEL BENCHMARKS</div>
                     <div class="card-content">
-                        <div class="bold-heading">Dual AI Framework Benchmarks:</div>
+                        <div class="bold-heading">Machine Learning vs Deep Learning Model Benchmark:</div>
                         
                         <table class="benchmark-table">
                             <thead>
                                 <tr>
                                     <th>Model Architecture</th>
                                     <th>Accuracy</th>
-                                    <th>Precision</th>
-                                    <th>ROC-AUC</th>
+                                    <th>ROC-AUC / Type</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Decision Tree Classifier</td>
-                                    <td>81.45%</td>
-                                    <td>0.8120</td>
-                                    <td>0.8910</td>
+                                    <td>81.56%</td>
+                                    <td>0.9455 AUC</td>
                                 </tr>
                                 <tr>
                                     <td>Random Forest Ensemble</td>
-                                    <td>84.20%</td>
-                                    <td>0.8415</td>
-                                    <td>0.9240</td>
+                                    <td>82.77%</td>
+                                    <td>0.9552 AUC</td>
                                 </tr>
                                 <tr class="highlight-row">
                                     <td>XGBoost Classifier (TOP ML)</td>
-                                    <td>92.40%</td>
-                                    <td>0.9240</td>
-                                    <td>0.9865</td>
+                                    <td>91.56%</td>
+                                    <td>0.9880 AUC</td>
                                 </tr>
                                 <tr>
-                                    <td>PyTorch LSTM (DKT)</td>
-                                    <td>88.50%</td>
-                                    <td>0.8840</td>
-                                    <td>0.9410</td>
+                                    <td>1D-CNN (Deep Learning)</td>
+                                    <td>84.97%</td>
+                                    <td>Deep Learning</td>
+                                </tr>
+                                <tr>
+                                    <td>Simple RNN (Deep Learning)</td>
+                                    <td>85.47%</td>
+                                    <td>Deep Learning</td>
                                 </tr>
                                 <tr class="highlight-row">
-                                    <td>PyTorch GRU DKT (TOP DEEP)</td>
-                                    <td>92.25%</td>
-                                    <td>0.9220</td>
-                                    <td>0.9780</td>
-                                </tr>
-                                <tr>
-                                    <td>Transformer-DKT (SAKT)</td>
-                                    <td>91.25%</td>
-                                    <td>0.9120</td>
-                                    <td>0.9650</td>
+                                    <td>LSTM / DKT (Deep Learning)</td>
+                                    <td>85.77%</td>
+                                    <td>Deep Learning</td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <div class="bold-heading">Advanced Deep Models:</div>
-                        <ul>
-                            <li><strong>Concept Graph GNN:</strong> 20-Node Matrix Convolution (0.0191 Loss) mapping skill dependencies.</li>
-                            <li><strong>Knowledge Autoencoder:</strong> 4D Latent Space Compression (0.0194 MSE Loss) converting friction.</li>
-                        </ul>
+                        <div class="bold-heading">Best Deployed Model:</div>
+                        <p><strong>XGBoost Classifier</strong> achieves the highest performance with <strong>91.56% Accuracy</strong> and <strong>0.9880 ROC-AUC score</strong>.</p>
                     </div>
                 </div>
 
@@ -519,45 +507,50 @@
                 <div class="poster-card">
                     <div class="card-header">5. DISCUSSION & DIAGNOSTIC EXPLAINABILITY</div>
                     <div class="card-content">
-                        <p><strong>1. Diagnostic Explainability:</strong> Evaluated models via One-vs-Rest (OvR) ROC-AUC curves (0.9865 Macro AUC) & Seaborn confusion matrices, confirming zero class bias across gap levels.</p>
-                        
-                        <p><strong>2. Latent Friction Diagnostics:</strong> Combined 20-Node Prerequisite GCN & 4D Autoencoder embeddings (0.0194 MSE) to identify exact prerequisite skill gaps before failure occurs.</p>
+                        <p><strong>1. Diagnostic Explainability:</strong> Evaluated ML models via One-vs-Rest (OvR) ROC-AUC curves (0.9880 XGBoost AUC, 0.9552 RF AUC, 0.9455 DT AUC) & Seaborn confusion matrices, confirming zero class bias across gap levels.</p>
 
                         <div class="chart-box">
-                            <div class="chart-title">Model Accuracy Comparisons (%)</div>
+                            <div class="chart-title">ML vs Deep Learning Model Accuracy (%)</div>
                             
                             <div class="bar-group">
-                                <div class="bar-label">XGBoost Classifier (92.40%)</div>
+                                <div class="bar-label">XGBoost Classifier (91.56%)</div>
                                 <div class="bar-track">
-                                    <div class="bar-fill highlight" style="width: 92.4%;">92.40%</div>
+                                    <div class="bar-fill highlight" style="width: 91.56%;">91.56%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar-label">LSTM / DKT (85.77%)</div>
+                                <div class="bar-track">
+                                    <div class="bar-fill highlight" style="width: 85.77%;">85.77%</div>
                                 </div>
                             </div>
                             
                             <div class="bar-group">
-                                <div class="bar-label">PyTorch GRU DKT (92.25%)</div>
+                                <div class="bar-label">Simple RNN (85.47%)</div>
                                 <div class="bar-track">
-                                    <div class="bar-fill highlight" style="width: 92.25%;">92.25%</div>
+                                    <div class="bar-fill" style="width: 85.47%;">85.47%</div>
                                 </div>
                             </div>
 
                             <div class="bar-group">
-                                <div class="bar-label">Transformer-DKT (91.25%)</div>
+                                <div class="bar-label">1D-CNN (84.97%)</div>
                                 <div class="bar-track">
-                                    <div class="bar-fill" style="width: 91.25%;">91.25%</div>
+                                    <div class="bar-fill" style="width: 84.97%;">84.97%</div>
                                 </div>
                             </div>
 
                             <div class="bar-group">
-                                <div class="bar-label">PyTorch LSTM DKT (88.50%)</div>
+                                <div class="bar-label">Random Forest Ensemble (82.77%)</div>
                                 <div class="bar-track">
-                                    <div class="bar-fill" style="width: 88.5%;">88.50%</div>
+                                    <div class="bar-fill" style="width: 82.77%; background: linear-gradient(90deg, #64748b, #475569);">82.77%</div>
                                 </div>
                             </div>
 
                             <div class="bar-group">
-                                <div class="bar-label">Random Forest Ensemble (84.20%)</div>
+                                <div class="bar-label">Decision Tree (81.56%)</div>
                                 <div class="bar-track">
-                                    <div class="bar-fill" style="width: 84.2%; background: linear-gradient(90deg, #64748b, #475569);">84.20%</div>
+                                    <div class="bar-fill" style="width: 81.56%; background: linear-gradient(90deg, #94a3b8, #64748b);">81.56%</div>
                                 </div>
                             </div>
                         </div>
@@ -570,13 +563,12 @@
                     <div class="card-content">
                         <div class="bold-heading" style="margin-bottom: 0px;">Summary of Core Project Contributions:</div>
                         <ul style="margin-top: 1px;">
-                            <li><strong>1. Dual AI Pipeline:</strong> Tabular ML (XGBoost 92.40% Acc) + Sequential DKT (PyTorch GRU 92.25% Acc).</li>
-                            <li><strong>2. Zero Label Leakage:</strong> Engineered 7-attribute behavioral interaction matrix capturing latency and hint reliance.</li>
-                            <li><strong>3. Concept Prerequisite Graphing:</strong> 20-Node Graph Neural Network (GCN) mapping dependency pathways (0.0191 Loss).</li>
-                            <li><strong>4. 4D Latent Autoencoder:</strong> Compressed interaction friction into 4 cognitive metrics (0.0194 MSE Loss).</li>
-                            <li><strong>5. Multi-Class Explainability:</strong> Validated via OvR ROC-AUC curves (0.9865 AUC) & Seaborn confusion matrices.</li>
-                            <li><strong>6. Dedicated /review Portal:</strong> Side-by-side color-coded comparison cards (Your Answer vs Correct) with quick filtering.</li>
-                            <li><strong>7. Session Remediation:</strong> Attended-topic recommendations (10 topics) with single-click print-ready A4 PDF study guides.</li>
+                            <li><strong>1. Best Deployed Model:</strong> XGBoost Classifier achieves top performance with 91.56% Accuracy & 0.9880 ROC-AUC.</li>
+                            <li><strong>2. Deep Knowledge Tracing:</strong> LSTM / DKT captures sequential student interactions with 85.77% Accuracy.</li>
+                            <li><strong>3. Zero Label Leakage:</strong> Engineered 7-attribute behavioral interaction matrix capturing latency and hint reliance.</li>
+                            <li><strong>4. Multi-Class Explainability:</strong> Validated via OvR ROC-AUC curves (0.9880 AUC) & Seaborn confusion matrices.</li>
+                            <li><strong>5. Dedicated /review Portal:</strong> Side-by-side color-coded comparison cards (Your Answer vs Correct) with quick filtering.</li>
+                            <li><strong>6. Session Remediation:</strong> Attended-topic recommendations (10 topics) with single-click print-ready A4 PDF study guides.</li>
                         </ul>
                     </div>
                 </div>
